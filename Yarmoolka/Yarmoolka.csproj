@@ -5,8 +5,14 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="AspNetCore.IServiceCollection.AddIUrlHelper" Version="1.0.0" />
+    <PackageReference Include="CsvHelper" Version="7.1.1" />
+    <PackageReference Include="IMDBCore" Version="1.0.2" />
+    <PackageReference Include="Microsoft.AspNetCore" Version="2.1.3" />
+    <PackageReference Include="Microsoft.AspNetCore.All" Version="2.1.3" />
     <PackageReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.1.2" PrivateAssets="All" />
+    <PackageReference Include="NReco.Recommender" Version="1.0.1" />
   </ItemGroup>
 
 </Project>

@@ -1,0 +1,173 @@
+﻿
+@model IEnumerable<Yarmoolka.Models.YarmoolkaClass>
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+ 
+
+@{
+    ViewData["Title"] = "Search";
+}
+<h2>Search Yarmoolka</h2>
+<br />
+@if (User.IsInRole("Admin"))
+{
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+}
+
+<form action="">
+    <fieldset layout="column">
+
+        <legend>Filters:</legend>
+        <table>
+
+
+            @if (User.IsInRole("Admin"))
+            {
+                <tr>
+                    <td>
+                        Supplier Name:
+                    </td>
+                    <td>
+                        @Html.DropDownList("SupplierId", String.Empty)
+                    </td>
+                </tr>
+            }
+                <tr>
+                    <td>
+                        Name:
+                    </td>
+                    <td>
+                        <input type="text" id="titleFilter" name="title" class="form-control text-box single-line valid" onkeyup="submitFilter(event)" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Release year:
+                    </td>
+                    <td>
+                        <input type="number" id="releaseYearFilter" name="year" class="form-control text-box single-line valid" onkeyup="submitFilter(event)" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Genere:
+                    </td>
+                    <td>
+                        <input type="text" id="genereFilter" name="genere" class="form-control text-box single-line valid" onkeyup="submitFilter(event)" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Company:
+                    </td>
+                    <td>
+                        <input type="text" id="CompanyFilter" name="Company" class="form-control text-box single-line valid" onkeyup="submitFilter(event)" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Price From:
+                    </td>
+                    <td>
+                        <input id="priceFilter" name="priceFrom" class="form-control text-box single-line valid" type="number" onkeyup="submitFilter(event)" />
+                    </td>
+                    <td>
+                        Price To:
+                    </td>
+                    <td>
+                        <input id="priceFilter" name="priceTo" class="form-control text-box single-line valid" type="number" onkeyup="submitFilter(event)" />
+                    </td>
+                </tr>
+            </table>
+    </fieldset>
+    <br />
+    <button class="btn btn-success" type="submit">Search</button>
+</form>
+
+<br />
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ModelDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Style)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Price)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Company)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Size)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Color)
+            </th>
+
+            @if (User.IsInRole("Admin"))
+            {
+                <th>
+                    @Html.DisplayNameFor(model => model.SupplierId)
+                </th>
+            }
+            </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ModelDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Style)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Price)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Company)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Size)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Color)
+            </td>
+
+            @if (User.IsInRole("Admin"))
+            {
+                <td>
+                    @Html.DisplayFor(modelItem => item.YarmoolkaSupplier.Name)
+                </td>
+            }
+                <td>
+                    <a asp-action="Details" asp-route-id="@item.ID">Imdb Info</a>
+
+                    @if (User.IsInRole("Admin"))
+                    {
+                        <div>
+                            <a asp-action="Edit" asp-route-id="@item.ID">Edit</a> |
+                            <a asp-action="Delete" asp-route-id="@item.ID"> Delete </a>
+                        </div>
+                    }
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+

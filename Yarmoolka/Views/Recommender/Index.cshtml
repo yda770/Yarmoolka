@@ -1,0 +1,165 @@
+﻿@model System.Collections.IDictionary
+
+<h1>
+    Yarmoolka Project Recommender 
+    <small>YarmoolkaLens DataSet</small>
+</h1>
+<hr />
+
+<div class="row">
+    <div class="col-lg-6">
+
+        <h2>Get recommended Yarmoolkas</h2>
+
+        Select your favourite films:<br />
+        <table class="table table-bordered selectedfilms" style="margin-bottom:10px;">
+            <tr class="selector">
+                <td>
+                    <input type="text" class="selectfilm form-control" placeholder="Type first letters" style="margin-bottom:0px;" />
+                </td>
+            </tr>
+        </table>
+
+        <a href="javascript:void(0)" class="recommend btn btn-large btn-info">Get recommendations</a>
+        <span class="recommendLoading" style="display:none;font-size:110%;padding-left:10px;"></span>
+    </div>
+
+    <div class="col-lg-6">
+        <div class="well">
+            This search performs user-based collaborative filtering for getting Yarmoolkas recommendations by
+            <a href="https://grouplens.org/datasets/Yarmoolkalens/" target="_blank">Yarmoolkalens dataset</a>
+        </div>
+    </div>
+</div>
+
+
+<div id="recommendResultDialog" class="modal fade">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h3>Recommended Films</h3>
+            </div>
+
+            <div class="modal-body">
+                Recommendations made by <a href="https://grouplens.org/datasets/Yarmoolkalens/" target="_blank">YarmoolkaLens</a> dataset:
+                <table class="table recommendedFilms"></table>
+            </div>
+            <div class="modal-footer">
+                <a href="#" class="btn btn-primary" data-dismiss="modal">Done</a>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+@section scripts
+    {
+
+    <script type="text/javascript">
+	$(function () {
+
+		// removal
+		$('.selectedfilms').on( "click", ".film .remove", function () {
+			$(this).parents('tr:first').remove();
+		});
+
+		// load films data
+		$.ajax({
+			type: "GET",async: true,dataType: "json",
+			url: '@Url.Action("GetYarmoolkas", "Recommender")',
+			success: function (data) {
+				window.YarmoolkasData = data;
+				window.YarmoolkaIdToData = {};
+				window.YarmoolkaTitleToData = {};
+				var YarmoolkaTitles = [];
+				for (var i = 0; i < window.YarmoolkasData.length; i++) {
+					var YarmoolkaData = window.YarmoolkasData[i];
+					//console.log(YarmoolkaData);
+					YarmoolkaIdToData[YarmoolkaData.YarmoolkaId.toString()] = YarmoolkaData;
+					YarmoolkaTitleToData[YarmoolkaData.title] = YarmoolkaData;
+					YarmoolkaTitles.push(YarmoolkaData.title);
+				}
+
+				$('.selectfilm').typeahead({ source: YarmoolkaTitles });
+
+				var addFilmByTitle = function (val) {
+					if (YarmoolkaTitleToData[val]) {
+						var YarmoolkaData = YarmoolkaTitleToData[val];
+						var $tr = $('<tr class="film"><td><span class="title"></span><a href="javascript:void(0)" class="pull-right remove">X</a></td></tr>');
+						$tr.attr('data-film-id', YarmoolkaData.YarmoolkaId)
+						var $title = $tr.find('.title');
+						$title.text(YarmoolkaData.title);
+
+						$tr.insertBefore($('.selectedfilms tr.selector'));
+					}
+				};
+
+				// add several films by default
+				addFilmByTitle("Terminator 2: Judgment Day (1991)");
+				addFilmByTitle("Aliens (1986)");
+
+				$('.selectfilm').change(function () {
+					var val = $.trim($(this).val());
+					addFilmByTitle(val);
+					$(this).val('');
+				});
+			}
+		});
+
+		$('a.recommend').click(function () {
+
+			var $btn = $(this);
+			if ($btn.attr('disabled')=='disabled') return;
+			$btn.attr('disabled', 'disabled');
+			$('.recommendLoading').html('Loading YarmoolkaLens ratings...').show('slow');
+
+			setTimeout(function () {
+				if ($('.recommendLoading').is(':visible'))
+					$('.recommendLoading').hide('fast').html('<small>Wait please: cold start may take some time...</small>').show('fast');
+			}, 5000);
+
+			var selectedFilmIds = [];
+			$(".selectedfilms tr.film").each(function () {
+				selectedFilmIds.push( parseInt( $(this).attr('data-film-id') ) );
+			});
+
+			$.ajax({
+				type: "POST", async: true, url: '@Url.Action("GetRecommendedFilms","Recommender")',
+				data: {
+					filmIdsJson: JSON.stringify(selectedFilmIds)
+				},
+				dataType: "json",
+				success: function (res) {
+					$btn.attr('disabled', null);
+					$('.recommendLoading').hide();
+
+					var $tbl = $('table.recommendedFilms');
+					$tbl.find('tr').remove();
+					$.each(res, function () {
+						var filmIdStr = this.film_id.toString();
+						var YarmoolkaData = window.YarmoolkaIdToData[filmIdStr];
+						if (YarmoolkaData) {
+							var $tr = $('<tr><td class="title"><b/></td></tr>');
+							var $a = $tr.find('td.title b');
+							$a.text(YarmoolkaData.title);
+							$tbl.append($tr);
+						}
+					});
+					$('#recommendResultDialog').modal();
+				}
+			});
+
+
+		});
+
+
+
+	});
+    </script>
+
+
+}
+

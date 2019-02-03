@@ -1,0 +1,1 @@
+﻿$('#large-header').addClass('animated flip');

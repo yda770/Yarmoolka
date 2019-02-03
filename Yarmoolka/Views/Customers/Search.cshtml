@@ -1,0 +1,121 @@
+﻿@model IEnumerable<Yarmoolka.Models.Customer>
+
+@{
+    ViewData["Title"] = "Search Customer";
+}
+
+<h2>Search Customer</h2>
+<br/>
+
+@if (User.IsInRole("Admin"))
+{
+    <p>
+        <a asp-action="Create">Create New</a>
+    </p>
+}
+
+    <form action="">
+        <fieldset layout="column">
+
+            <legend>Filters:</legend>
+            <table>
+                <tr>
+                    <td>
+                        Customer Id:
+                    </td>
+                    <td>
+                        <input id="CustomerId" name="CustomerId" class="form-control text-box single-line valid" type="text" onkeyup="submitFilter(event)" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Name:
+                    </td>
+                    <td>
+                        <input type="text" id="Name" name="Name" class="form-control text-box single-line valid" onkeyup="submitFilter(event)" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Age:
+                    </td>
+                    <td>
+                        <input type="number" id="Age" name="Age" class="form-control text-box single-line valid" onkeyup="submitFilter(event)" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        City:
+                    </td>
+                    <td>
+                        <input type="text" id="City" name="City" class="form-control text-box single-line valid" onkeyup="submitFilter(event)" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Phone Number:
+                    </td>
+                    <td>
+                        <input type="text" id="PhoneNumber" name="PhoneNumber" class="form-control text-box single-line valid" onkeyup="submitFilter(event)" />
+                    </td>
+                </tr>
+            </table>
+        </fieldset>
+        <br />
+        <button class="btn btn-success" type="submit">Search</button>
+    </form>
+<br />
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.CustomerId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Age)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.City)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PhoneNumber)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.CustomerId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Age)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.City)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PhoneNumber)
+            </td>
+
+            @if (User.IsInRole("Admin"))
+            {
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.ID">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.ID"> Details </a> |
+                    <a asp-action="Delete" asp-route-id="@item.ID"> Delete </a>
+
+                </td>
+            }
+        </tr>
+        }
+    </tbody>
+</table>

@@ -1,0 +1,98 @@
+﻿@{
+    ViewBag.Title = "Branches";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>
+    Our shop branches
+
+    @if (User.IsInRole("Admin"))
+    {
+        <div class="btn-group" role="group" aria-label="...">
+            <a href="/StoreBranches/create" class="btn btn-success">Add Branch</a>
+
+            <a href="/StoreBranches/index" class="btn btn-warning">All Branches</a>
+        </div>
+    }
+
+    </h2> 
+
+
+<img src="../../Content/ajax-loader.gif" alt='loading' class="loading">
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAwpFIUXtu2ZFyJ7wjYW1G2RuZWZPcvsgo&callback=initMap" type="text/javascript"></script>
+
+<style>
+    #map_canvas img {
+        max-width: none;
+    }
+</style>
+
+<style>
+    .infoDiv {
+        height: 200px;
+        width: 300px;
+        -webkit-user-select: none;
+        background-color: white;
+    }
+
+    #map-container {
+        display: flex;
+        flex-direction: row;
+    }
+</style>
+
+
+
+
+
+    <div id="map_canvas" style="height: 600px;    border-radius: 40px;"></div>
+
+
+
+
+
+    <br /><br /><br />
+
+
+
+    <p>
+        <a href="javascript:void(0);" onclick="history.go(-1);">Go Back</a>
+    </p>
+
+
+    @section scripts {
+        <script type="text/javascript">
+            $(function () {
+                google.maps.visualRefresh = true;
+                var mapOptions = {
+                    zoom: 11,
+                    center: new google.maps.LatLng(32.0853000, 34.7817680),
+                    mapTypeId: google.maps.MapTypeId.G_NORMAL_MAP
+                };
+                var map = new google.maps.Map(document.getElementById("map_canvas"), mapOptions);
+                $.getJSON("../StoreBranches/GetAllBranches", function (getAllBranches) {
+                    for (var i = 0; i < getAllBranches.length; i++) {
+                        var marker = new google.maps.Marker({
+                            'position': new google.maps.LatLng(getAllBranches[i]["latitude"], getAllBranches[i]["longitude"]),
+                            'map': map,
+                            'title': getAllBranches[i]["brnachName"]
+                        });
+
+                        var content = "<div><h2>" + getAllBranches[i]["brnachName"] +
+                            "</h2>" + "<div><h4>Opening hours: " + getAllBranches[i]["openingHours"] + "</h4></div></div>";
+                        bindInfoWindow(marker, map, new google.maps.InfoWindow(), content);
+                    }
+                });
+
+                $('.loading').hide();
+            });
+
+            function bindInfoWindow(marker, map, infowindow, html) {
+                google.maps.event.addListener(marker, 'click', function () {
+                    infowindow.setContent(html);
+                    infowindow.open(map, marker);
+                });
+            }
+        </script>
+    }

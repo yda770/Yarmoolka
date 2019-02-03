@@ -1,0 +1,103 @@
+﻿@model IEnumerable<Yarmoolka.Models.Supplier>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+
+@if (User.IsInRole("Admin"))
+{
+    <p>
+
+        <a asp-action="Create">Create New</a>
+    </p>
+
+}
+
+    <form action="">
+        <fieldset layout="column">
+
+            <legend>Filters:</legend>
+            <table>
+                <tr>
+                    <td>
+                        Supplier Id:
+                    </td>
+                    <td>
+                        <input id="SupplierId" name="SupplierId" class="form-control text-box single-line valid" type="text" onkeyup="submitFilter(event)" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Name:
+                    </td>
+                    <td>
+                        <input type="text" id="Name" name="Name" class="form-control text-box single-line valid" onkeyup="submitFilter(event)" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Address:
+                    </td>
+                    <td>
+                        <input type="text" id="Address" name="Address" class="form-control text-box single-line valid" onkeyup="submitFilter(event)" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Phone Number:
+                    </td>
+                    <td>
+                        <input type="text" id="PhoneNumber" name="PhoneNumber" class="form-control text-box single-line valid" onkeyup="submitFilter(event)" />
+                    </td>
+                </tr>
+            </table>
+        </fieldset>
+        <br />
+        <button class="btn btn-success" type="submit">Search</button>
+    </form>
+    <br />
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Name)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.PhoneNumber)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Address)
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PhoneNumber)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Address)
+                </td>
+
+
+                @if (User.IsInRole("Admin"))
+                {
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@item.ID">Edit</a> |
+                        <a asp-action="Details" asp-route-id="@item.ID">Details</a> |
+                        <a asp-action="Delete" asp-route-id="@item.ID">Delete</a>
+                    </td>
+                }
+                </tr>
+            }
+        </tbody>
+    </table>

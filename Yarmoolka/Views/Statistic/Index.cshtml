@@ -1,0 +1,408 @@
+﻿<html>
+<head>
+    <script type="text/javascript" src="https://d3js.org/d3.v4.min.js"></script>
+</head>
+<body>
+    <table class="Graghs">
+        <tbody>
+            <tr><h1> Statistics</h1></tr>
+            <tr>
+                <td id="ExpensiveYarmoolkas">
+                    <h4>The most Expensive Yarmoolkas</h4>
+                </td>
+                <td id="ChippestYarmoolkas">
+                    <h4>The most Chippest Yarmoolkas</h4>
+                </td>
+            </tr>
+            <tr>
+                <td id="Style">
+                    <h4>Yarmoolkas order by Style</h4>
+                </td>
+                <td id="Suppliers">
+                    <h4>Yarmoolkas by Suppliers</h4>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
+
+@section Scripts {
+    <script type="text/javascript">
+		// Get the most expensive Yarmoolkas
+		$.ajax({
+			type: "GET", async: true, dataType: "json",
+			url: '@Url.Action("GetMostExpensiveYarmoolkas", "Quereies")',
+			data: { p_topToTake : 5},
+			success: function (data) {
+				if (data == undefined || data.length == 0) {
+					d3.select("#ExpensiveYarmoolkas")
+						.append("h3")
+						.text("There is no data to show :(")
+				}
+				else {
+					//Width and height
+					var w = 300;
+					var h = 300;
+					var dataset = data.map(Yarmoolka => (Yarmoolka.price));
+					var YarmoolkasNames = data.map(Yarmoolka => (Yarmoolka.title));
+
+					var xScale = d3.scaleBand()
+						.domain(d3.range(dataset.length))
+						.rangeRound([0, w])
+						.paddingInner(0.05);
+
+					var yScale = d3.scaleLinear()
+						.domain([0, d3.max(dataset)])
+						.range([0, h]);
+
+					//Create SVG element
+					var svg = d3.select("#ExpensiveYarmoolkas")
+						.append("svg")
+						.attr("width", w)
+						.attr("height", h);
+
+					//Create bars
+					svg.selectAll("rect")
+						.data(dataset)
+						.enter()
+						.append("rect")
+						.attr("x", function (d, i) {
+							return xScale(i);
+						})
+						.attr("y", function (d) {
+							return h - yScale(d);
+						})
+						.attr("width", xScale.bandwidth())
+						.attr("height", function (d) {
+							return yScale(d);
+						})
+						.attr("fill", function (d) {
+							return "rgb(0, 0, " + Math.round(d * 10) + ")";
+                        })
+                        .on("mouseover", function () {
+                            d3.select(this)
+                                .attr("fill", "red");
+                        })
+                        .on("mouseout", function (d, i) {
+                            d3.select(this).attr("fill", function () {
+                                return "rgb(0, 0, " + Math.round(d * 10) + ")";
+                            });
+                        });
+
+					//Create labels
+					svg.selectAll("text")
+						.data(dataset)
+						.enter()
+						.append("text")
+						.text(function (d) {
+							return d;
+						})
+						.attr("text-anchor", "middle")
+						.attr("x", function (d, i) {
+							return xScale(i) + xScale.bandwidth() / 2;
+						})
+						.attr("y", function (d) {
+							return h - yScale(d) + 14;
+						})
+						.attr("font-family", "sans-serif")
+						.attr("font-size", "7px")
+						.attr("fill", "white");
+
+					svg.selectAll("g")
+						.data(YarmoolkasNames)
+						.enter()
+						.append("text")
+						.text(function (d) {
+							return d;
+						})
+						.attr("text-anchor", "middle")
+						.attr("x", function (d, i) {
+							return xScale(i) + xScale.bandwidth() / 2;
+						})
+						.attr("y", function (d) {
+							return h - 5;
+						})
+						.attr("font-family", "sans-serif")
+						.attr("font-size", "10px")
+						.attr("fill", "white");
+				}
+			}
+		})
+
+		//Get the most chippest Yarmoolkas
+		$.ajax({
+			type: "GET", async: true, dataType: "json",
+			url: '@Url.Action("GetChippestYarmoolkas", "Quereies")',
+			data: { p_topToTake: 5 },
+			success: function (data) {
+				if (data == undefined || data.length == 0) {
+					d3.select("#ChippestYarmoolkas")
+						.append("h3")
+						.text("There is no data to show :(")
+				}
+				else {
+					//Width and height
+					var w = 300;
+					var h = 300;
+					var dataset = data.map(Yarmoolka => (Yarmoolka.price));
+					var YarmoolkasNames = data.map(Yarmoolka => (Yarmoolka.title));
+
+					var xScale = d3.scaleBand()
+						.domain(d3.range(dataset.length))
+						.rangeRound([0, w])
+						.paddingInner(0.05);
+
+					var yScale = d3.scaleLinear()
+						.domain([0, d3.max(dataset)])
+						.range([0, h]);
+
+					//Create SVG element
+					var svg = d3.select("#ChippestYarmoolkas")
+						.append("svg")
+						.attr("width", w)
+						.attr("height", h);
+
+					//Create bars
+                    svg.selectAll("rect")
+                        .data(dataset)
+                        .enter()
+                        .append("rect")
+                        .attr("x", function (d, i) {
+                            return xScale(i);
+                        })
+                        .attr("y", function (d) {
+                            return h - yScale(d);
+                        })
+                        .attr("width", xScale.bandwidth())
+                        .attr("height", function (d) {
+                            return yScale(d);
+                        })
+                        .attr("fill", "green").on("mouseover", function () {
+                            d3.select(this)
+                                .attr("fill", "red");
+                        })
+                        .on("mouseout", function (d, i) {
+                            d3.select(this).attr("fill", function () {
+                                return "green";
+                            });
+                        });
+
+					//Create labels
+					svg.selectAll("text")
+						.data(dataset)
+						.enter()
+						.append("text")
+						.text(function (d) {
+							return d;
+						})
+						.attr("text-anchor", "middle")
+						.attr("x", function (d, i) {
+							return xScale(i) + xScale.bandwidth() / 2;
+						})
+						.attr("y", function (d) {
+							return h - yScale(d) + 14;
+						})
+						.attr("font-family", "sans-serif")
+						.attr("font-size", "7px")
+                        .attr("fill", "white");
+
+					svg.selectAll("g")
+						.data(YarmoolkasNames)
+						.enter()
+						.append("text")
+						.text(function (d) {
+							return d;
+						})
+						.attr("text-anchor", "middle")
+						.attr("x", function (d, i) {
+							return xScale(i) + xScale.bandwidth() / 2;
+						})
+						.attr("y", function (d) {
+							return h - 5;
+						})
+						.attr("font-family", "sans-serif")
+						.attr("font-size", "10px")
+						.attr("fill", "white");
+				}
+			}
+		});
+
+		// Yarmoolkas order by Style
+			$.ajax({
+			type: "GET", async: true, dataType: "json",
+			url: '@Url.Action("GetYarmoolkasByStyle", "Quereies")',
+			data: { p_topToTake : 5},
+				success: function (data) {
+					if (data == undefined || data.length == 0) {
+						d3.select("#Style")
+							.append("h3")
+							.text("There is no data to show :(")
+					}
+					    else {
+						//Width and height
+						var w = 300;
+						var h = 300;
+
+						var dataset = data.map(Yarmoolka => (Yarmoolka.length));
+						var YarmoolkasNames = data.map(Yarmoolka => (Yarmoolka[0].Style));
+
+						var xScale = d3.scaleBand()
+							.domain(d3.range(dataset.length))
+							.rangeRound([0, w])
+							.paddingInner(0.05);
+
+						var yScale = d3.scaleLinear()
+							.domain([0, d3.max(dataset)])
+							.range([0, h]);
+
+						//Create SVG element
+						var svg = d3.select("#Style")
+							.append("svg")
+							.attr("width", w)
+							.attr("height", h);
+
+						//Create bars
+						svg.selectAll("rect")
+							.data(dataset)
+							.enter()
+							.append("rect")
+							.attr("x", function (d, i) {
+								return xScale(i);
+							})
+							.attr("y", function (d) {
+								return h - yScale(d);
+							})
+							.attr("width", xScale.bandwidth())
+							.attr("height", function (d) {
+								return yScale(d);
+							})
+							.attr("fill", function (d) {
+								return "rgb(0, 0, " + Math.round(d * 10) + ")";
+                            })
+                            .on("mouseover", function () {
+                                d3.select(this)
+                                    .attr("fill", "red");
+                            })
+                            .on("mouseout", function (d, i) {
+                                d3.select(this).attr("fill", function () {
+                                    return "rgb(0, 0, " + Math.round(d * 10) + ")";
+                                });
+                            });
+
+						//Create labels
+						svg.selectAll("text")
+							.data(dataset)
+							.enter()
+							.append("text")
+							.text(function (d) {
+								return d;
+							})
+							.attr("text-anchor", "middle")
+							.attr("x", function (d, i) {
+								return xScale(i) + xScale.bandwidth() / 2;
+							})
+							.attr("y", function (d) {
+								return h - yScale(d) + 14;
+							})
+							.attr("font-family", "sans-serif")
+							.attr("font-size", "7px")
+							.attr("fill", "white");
+
+						svg.selectAll("g")
+							.data(YarmoolkasNames)
+							.enter()
+							.append("text")
+							.text(function (d) {
+								return d;
+							})
+							.attr("text-anchor", "middle")
+							.attr("x", function (d, i) {
+								return xScale(i) + xScale.bandwidth() / 2;
+							})
+							.attr("y", function (d) {
+								return h - 5;
+							})
+							.attr("font-family", "sans-serif")
+							.attr("font-size", "10px")
+							.attr("fill", "white");
+					}
+				}
+        })
+
+        // Yarmoolkas according to suppliers
+        $.ajax({
+            type: "GET", async: true, dataType: "json",
+            url: '@Url.Action("GetYarmoolkasGroupedBySuppliers", "Quereies")',
+            success: function (data) {
+                if (data == undefined || data.length == 0) {
+                    d3.select("#Suppliers")
+                        .append("h3")
+                        .text("There is no data to show :(")
+                }
+                else {
+                    var suppliersNames = data.map(Yarmoolka => (Yarmoolka[0].supplier));
+                    var data = data.map(Yarmoolka => (Yarmoolka.length));
+
+                    var width = 300,
+                        height = 300;
+
+                    color = d3.schemeCategory20c;
+
+                    var outerRadius = height / 2 - 20,
+                        innerRadius = outerRadius / 3,
+                        cornerRadius = 10;
+
+                    var pie = d3.pie()
+                        .padAngle(.02);
+
+                    var arc = d3.arc()
+                        .padRadius(outerRadius)
+                        .innerRadius(innerRadius);
+
+                    var svg = d3.select("#Suppliers").append("svg")
+                        .attr("width", width)
+                        .attr("height", height)
+                        .append("g")
+                        .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
+
+                    var slides = svg.selectAll("path")
+                        .data(pie(data))
+                        .enter().append("path")
+                        .each(function (d) { d.outerRadius = outerRadius - 20; })
+                        .attr("d", arc)
+                        .attr("fill", function (d, i) { return color[i]; })
+                        .attr("d", arc)     
+                        .on("mouseover", arcTween(outerRadius, 0))
+                        .on("mouseout", arcTween(outerRadius - 20, 150))
+                        .append("title")
+                        .text(d => d.value);
+
+             
+                    slides.append("svg:text")                                     //add a label to each slice
+                        .attr("transform", function (d) {                    //set the label's origin to the center of the arc
+                            //we have to make sure to set these before calling arc.centroid
+                            d.innerRadius = 0;
+                            d.outerRadius = outerRadius;
+                            return "translate(" + arc.centroid(d) + ")";        //this gives us a pair of coordinates like [50, 50]
+                        })
+                        .attr("text-anchor", "middle")                          //center the text on it's origin
+                        .text(function (d, i) { return (" : " + suppliersNames[i]); });    
+                     
+                    function arcTween(outerRadius, delay) {
+                        return function () {
+                            d3.select(this).transition().delay(delay).attrTween("d", function (d) {
+                                var i = d3.interpolate(d.outerRadius, outerRadius);
+                                return function (t) { d.outerRadius = i(t); return arc(d); };
+                            });
+                        };
+                    }
+                }       
+            }
+            });
+    </script>
+}
+
+@section styles {
+    <link rel="stylesheet" type="text/css" href="~/css/Statistic.css" />
+}

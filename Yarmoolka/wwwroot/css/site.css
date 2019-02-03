@@ -1,8 +1,11 @@
-﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification\ 
-for details on configuring this project to bundle and minify static web assets. */
+﻿* {
+    font-family: 'Raleway', sans-serif !important;
+}
+
 body {
     padding-top: 50px;
     padding-bottom: 20px;
+    font-family: 'Raleway', sans-serif !important;
 }
 
 /* Wrapping element */
@@ -34,4 +37,10 @@ body {
     .carousel-caption {
         display: none;
     }
+}
+
+
+#app-logo {
+    width:20px;
+    float:left
 }
