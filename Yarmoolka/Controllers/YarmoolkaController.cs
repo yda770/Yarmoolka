@@ -130,7 +130,7 @@ namespace Yarmoolka.Controllers
         [HttpPost]
         [ValidateAntiForgeryToken]
         [Microsoft.AspNetCore.Authorization.Authorize(Policy = "RequireAdminRole")]
-        public async Task<IActionResult> Create([Bind("ID,Title,ModelDate,Style,Price,Company,Length,Color,SupplierId")] Models.YarmoolkaClass Yarmoolka)
+        public async Task<IActionResult> Create([Bind("ID,Name,ModelDate,Style,Price,Company,Size,Color,SupplierId")] Models.YarmoolkaClass Yarmoolka)
         {
             if (ModelState.IsValid)
             {
@@ -155,7 +155,8 @@ namespace Yarmoolka.Controllers
             {
                 return NotFound();
             }
-            PopulateSuppliersDropDownList(Yarmoolka.YarmoolkaSupplier.ID);
+            ViewBag.SupplierId = new SelectList(_context.Supplier, "ID", "Name", Yarmoolka.SupplierId);
+            //PopulateSuppliersDropDownList(Yarmoolka.YarmoolkaSupplier.ID);
             return View(Yarmoolka);
         }
 
@@ -165,7 +166,7 @@ namespace Yarmoolka.Controllers
         [HttpPost]
         [ValidateAntiForgeryToken]
         [Microsoft.AspNetCore.Authorization.Authorize(Policy = "RequireAdminRole")]
-        public async Task<IActionResult> Edit(int id, [Bind("ID,Title,ModelDate,Style,Price,Company,Length,Color")] Models.YarmoolkaClass Yarmoolka)
+        public async Task<IActionResult> Edit(int id, [Bind("ID,Name,ModelDate,Style,Price,Company,Size,Color,SupplierId")] Models.YarmoolkaClass Yarmoolka)
         {
             if (id != Yarmoolka.ID)
             {
@@ -251,7 +252,6 @@ namespace Yarmoolka.Controllers
                                    select d;
             
             ViewBag.SupplierId = new SelectList(suppliersQuery, "ID", "Name", selectedSupplier);
-            //new SelectList()
         }
     }
 }

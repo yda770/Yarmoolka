@@ -49,6 +49,13 @@
                 <span asp-validation-for="Color" class="text-danger"></span>
             </div>
             <div class="form-group">
+                <label class="control-label col-md-2" for="SupplierId">Supplier</label>
+                <div class="col-md-10">
+                    @Html.DropDownList("SupplierId")
+                    @Html.ValidationMessageFor(model => model.SupplierId)
+                </div>
+            </div>
+            <div class="form-group">
                 <input type="submit" value="Save" class="btn btn-default" />
             </div>
         </form>
