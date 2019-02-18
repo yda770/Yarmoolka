@@ -9,9 +9,11 @@ namespace Yarmoolka.Models
     {
         public int ID { get; set; }
         [Required]
+        [Display(Name = "Model Name")]
         public string Name { get; set; }
         [DataType(DataType.Date)]
         [Required]
+        [Display(Name = "Model Date")]
         public DateTime ModelDate { get; set; }
         public string Style { get; set; }
 

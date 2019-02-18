@@ -6,7 +6,6 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.EntityFrameworkCore;
 using Yarmoolka.Models;
 using Microsoft.AspNetCore.Mvc.Rendering;
-using IMDBCore;
 
 namespace Yarmoolka.Controllers
 
@@ -18,6 +17,7 @@ namespace Yarmoolka.Controllers
         
         public YarmoolkasController(YarmoolkaContext context, IConfiguration Configuration)
         {
+            _context = context;
             _context = context;
             _configuration = Configuration;
         }
@@ -103,17 +103,14 @@ namespace Yarmoolka.Controllers
             }
 
             var Yarmoolka = await _context.Yarmoolka
+                .Include(a => a.YarmoolkaSupplier)
                 .SingleOrDefaultAsync(m => m.ID == id);
 
             if (Yarmoolka == null)
             {
                 return NotFound();
             }
-
-            ImdbMovie YarmoolkaRev= this.GetYarmoolkaData(Yarmoolka.Name);
-    
-
-            return View("details",YarmoolkaRev);
+            return View("details", Yarmoolka);
         }
 
         // GET: Yarmoolkas/Create
@@ -227,18 +224,6 @@ namespace Yarmoolka.Controllers
             _context.Yarmoolka.Remove(Yarmoolka);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
-        }
-
-        public ImdbMovie GetYarmoolkaData(string YarmoolkaName)
-        {
-            string  API_KEY =  _configuration.GetSection("AppSettings")["ImdbApiKey"];
-
-            var imdb = new Imdb(API_KEY);
-            var Yarmoolka =  imdb.GetMovieAsync(YarmoolkaName);
-
-           return Yarmoolka.Result;
-
-            
         }
 
         private bool YarmoolkaExists(int id)

@@ -46,7 +46,7 @@
 
                     @if (User.IsInRole("Admin"))
                     {
-                           <li><a asp-area="" asp-controller="suppliers" asp-action="Search">Suppliers</a></li>
+                        <li><a asp-area="" asp-controller="suppliers" asp-action="Search">Suppliers</a></li>
                         <li><a asp-area="" asp-controller="Admin" asp-action="Index">Admin</a></li>
                     }
                 </ul>
@@ -54,9 +54,15 @@
             </div>
         </div>
     </nav>
+
+
     <div class="container body-content">
+        <br />
+        <br />
+        <br />
+
         @RenderBody()
-        <hr />
+
         <footer>
             <p>&copy; 2018 - YarmoolkaProject</p>
         </footer>
