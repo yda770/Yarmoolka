@@ -8,9 +8,14 @@
 
 @if (User.IsInRole("Admin"))
 {
-    <p>
-        <a asp-action="Create">Create New</a>
-    </p>
+<p>
+    @*<a asp-action="Create">Create New</a>*@
+    <button type="button" id="Create" class="btn btn-primary">Create New</button>
+    @*<asp:LinkButton ID="Create" CssClass="btn btn-default btn-lg" runat="server" text="Create New" OnClick="Create" >
+        <span class="glyphicon glyphicon-cog"></span>
+    </asp:LinkButton>*@
+
+</p>
 }
 
 <table class="table">

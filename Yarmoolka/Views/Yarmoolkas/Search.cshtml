@@ -15,7 +15,8 @@
 @if (User.IsInRole("Admin"))
 {
 <p>
-    <a asp-action="Create">Create New</a>
+    <a asp-action="Create" class="btn btn-primary">Create New</a>
+
 </p>
 }
 
@@ -39,7 +40,7 @@
             }
                 <tr>
                     <td>
-                        Name:
+                        Model Name:
                     </td>
                     <td>
                         <input type="text" id="titleFilter" name="title" class="form-control text-box single-line valid" onkeyup="submitFilter(event)" />
@@ -47,7 +48,7 @@
                 </tr>
                 <tr>
                     <td>
-                        Release year:
+                        Model Year:
                     </td>
                     <td>
                         <input type="number" id="releaseYearFilter" name="year" class="form-control text-box single-line valid" onkeyup="submitFilter(event)" />
@@ -55,7 +56,7 @@
                 </tr>
                 <tr>
                     <td>
-                        Genere:
+                        Style:
                     </td>
                     <td>
                         <input type="text" id="genereFilter" name="genere" class="form-control text-box single-line valid" onkeyup="submitFilter(event)" />
