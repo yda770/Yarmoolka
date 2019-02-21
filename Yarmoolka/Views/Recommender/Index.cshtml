@@ -1,17 +1,17 @@
 ﻿@model System.Collections.IDictionary
-
+MovieLens
 <h1>
-    Yarmoolka Project Recommender 
-    <small>YarmoolkaLens DataSet</small>
+    Yarmoolka "Seret" Recommender 
+    <small>MovieLens DataSet</small>
 </h1>
 <hr />
 
 <div class="row">
     <div class="col-lg-6">
 
-        <h2>Get recommended Yarmoolkas</h2>
+        <h2>Get recommended "Seret" for your Yarmoolkas</h2>
 
-        Select your favourite films:<br />
+        Select your favourite Seret's:<br />
         <table class="table table-bordered selectedfilms" style="margin-bottom:10px;">
             <tr class="selector">
                 <td>
@@ -26,8 +26,8 @@
 
     <div class="col-lg-6">
         <div class="well">
-            This search performs user-based collaborative filtering for getting Yarmoolkas recommendations by
-            <a href="https://grouplens.org/datasets/Yarmoolkalens/" target="_blank">Yarmoolkalens dataset</a>
+            This search performs user-based collaborative filtering for getting Seret's recommendations by
+            <a href="https://grouplens.org/datasets/movielens/" target="_blank">Movielens dataset</a>
         </div>
     </div>
 </div>
@@ -43,7 +43,7 @@
             </div>
 
             <div class="modal-body">
-                Recommendations made by <a href="https://grouplens.org/datasets/Yarmoolkalens/" target="_blank">YarmoolkaLens</a> dataset:
+                Recommendations made by <a href="https://grouplens.org/datasets/movielens/" target="_blank">MovieLens</a> dataset:
                 <table class="table recommendedFilms"></table>
             </div>
             <div class="modal-footer">
@@ -69,29 +69,29 @@
 		// load films data
 		$.ajax({
 			type: "GET",async: true,dataType: "json",
-			url: '@Url.Action("GetYarmoolkas", "Recommender")',
+			url: '@Url.Action("GetMovie", "Recommender")',
 			success: function (data) {
-				window.YarmoolkasData = data;
-				window.YarmoolkaIdToData = {};
-				window.YarmoolkaTitleToData = {};
-				var YarmoolkaTitles = [];
-				for (var i = 0; i < window.YarmoolkasData.length; i++) {
-					var YarmoolkaData = window.YarmoolkasData[i];
-					//console.log(YarmoolkaData);
-					YarmoolkaIdToData[YarmoolkaData.YarmoolkaId.toString()] = YarmoolkaData;
-					YarmoolkaTitleToData[YarmoolkaData.title] = YarmoolkaData;
-					YarmoolkaTitles.push(YarmoolkaData.title);
+                window.MovieData = data;
+                window.MovieIdToData = {};
+                window.MovieTitleToData = {};
+                var MovieTitles = [];
+                for (var i = 0; i < window.MovieData.length; i++) {
+                    var MovieData = window.MovieData[i];
+					//console.log(MovieData);
+                    MovieIdToData[MovieData.MovieId.toString()] = MovieData;
+                    MovieTitleToData[MovieData.title] = MovieData;
+                    MovieTitles.push(MovieData.title);
 				}
 
-				$('.selectfilm').typeahead({ source: YarmoolkaTitles });
+				$('.selectfilm').typeahead({ source: MovieTitles });
 
 				var addFilmByTitle = function (val) {
-					if (YarmoolkaTitleToData[val]) {
-						var YarmoolkaData = YarmoolkaTitleToData[val];
+					if (MovieTitleToData[val]) {
+                        var MovieData = MovieTitleToData[val];
 						var $tr = $('<tr class="film"><td><span class="title"></span><a href="javascript:void(0)" class="pull-right remove">X</a></td></tr>');
-						$tr.attr('data-film-id', YarmoolkaData.YarmoolkaId)
+                        $tr.attr('data-film-id', MovieData.MovieId)
 						var $title = $tr.find('.title');
-						$title.text(YarmoolkaData.title);
+                        $title.text(MovieData.title);
 
 						$tr.insertBefore($('.selectedfilms tr.selector'));
 					}
@@ -114,7 +114,7 @@
 			var $btn = $(this);
 			if ($btn.attr('disabled')=='disabled') return;
 			$btn.attr('disabled', 'disabled');
-			$('.recommendLoading').html('Loading YarmoolkaLens ratings...').show('slow');
+			$('.recommendLoading').html('Loading MovieLens ratings...').show('slow');
 
 			setTimeout(function () {
 				if ($('.recommendLoading').is(':visible'))
@@ -140,11 +140,11 @@
 					$tbl.find('tr').remove();
 					$.each(res, function () {
 						var filmIdStr = this.film_id.toString();
-						var YarmoolkaData = window.YarmoolkaIdToData[filmIdStr];
-						if (YarmoolkaData) {
+                        var MovieData = window.MovieIdToData[filmIdStr];
+                        if (MovieData) {
 							var $tr = $('<tr><td class="title"><b/></td></tr>');
 							var $a = $tr.find('td.title b');
-							$a.text(YarmoolkaData.title);
+                            $a.text(MovieData.title);
 							$tbl.append($tr);
 						}
 					});

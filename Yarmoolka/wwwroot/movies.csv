@@ -1,4 +1,4 @@
-YarmoolkaId,title,Styles
+MovieId,title,Styles
 1,Toy Story (1995),Adventure|Animation|Children|Comedy|Fantasy
 2,Jumanji (1995),Adventure|Children|Fantasy
 3,Grumpier Old Men (1995),Comedy|Romance
@@ -159,7 +159,7 @@ YarmoolkaId,title,Styles
 178,Love & Human Remains (1993),Comedy|Drama
 179,Mad Love (1995),Drama|Romance
 180,Mallrats (1995),Comedy|Romance
-181,Mighty Morphin Power Rangers: The Yarmoolka (1995),Action|Children
+181,Mighty Morphin Power Rangers: The Movie (1995),Action|Children
 183,Mute Witness (1994),Comedy|Horror|Thriller
 184,Nadja (1994),Drama
 185,"Net, The (1995)",Action|Crime|Thriller
@@ -210,12 +210,12 @@ YarmoolkaId,title,Styles
 236,French Kiss (1995),Action|Comedy|Romance
 237,Forget Paris (1995),Comedy|Romance
 238,Far From Home: The Adventures of Yellow Dog (1995),Adventure|Children
-239,"Goofy Yarmoolka, A (1995)",Animation|Children|Comedy|Romance
+239,"Goofy Movie, A (1995)",Animation|Children|Comedy|Romance
 240,Hideaway (1995),Thriller
 241,Fluke (1995),Children|Drama
 242,Farinelli: il castrato (1994),Drama|Musical
 243,Gordy (1995),Children|Comedy|Fantasy
-244,Gumby: The Yarmoolka (1995),Animation|Children
+244,Gumby: The Movie (1995),Animation|Children
 245,The Glass Shield (1994),Crime|Drama
 246,Hoop Dreams (1994),Documentary
 247,Heavenly Creatures (1994),Crime|Drama
@@ -517,7 +517,7 @@ YarmoolkaId,title,Styles
 580,Princess Caraboo (1994),Drama
 581,"Celluloid Closet, The (1995)",Documentary
 582,Métisse (Café au Lait) (1993),Comedy|Drama
-585,"Brady Bunch Yarmoolka, The (1995)",Comedy
+585,"Brady Bunch Movie, The (1995)",Comedy
 586,Home Alone (1990),Children|Comedy
 587,Ghost (1990),Comedy|Drama|Fantasy|Romance|Thriller
 588,Aladdin (1992),Adventure|Animation|Children|Comedy|Musical
@@ -574,7 +574,7 @@ YarmoolkaId,title,Styles
 667,Bloodsport 2 (a.k.a. Bloodsport II: The Next Kumite) (1996),Action
 668,Song of the Little Road (Pather Panchali) (1955),Drama
 670,"World of Apu, The (Apur Sansar) (1959)",Drama
-671,Mystery Science Theater 3000: The Yarmoolka (1996),Comedy|Sci-Fi
+671,Mystery Science Theater 3000: The Movie (1996),Comedy|Sci-Fi
 673,Space Jam (1996),Adventure|Animation|Children|Comedy|Fantasy|Sci-Fi
 674,Barbarella (1968),Adventure|Comedy|Sci-Fi
 678,Some Folks Call It a Sling Blade (1993),Drama|Thriller
@@ -834,7 +834,7 @@ YarmoolkaId,title,Styles
 1028,Mary Poppins (1964),Children|Comedy|Fantasy|Musical
 1029,Dumbo (1941),Animation|Children|Drama|Musical
 1030,Pete's Dragon (1977),Adventure|Animation|Children|Musical
-1031,Bedknobs and Broomsticks (1971),Adventure|Children|Musical
+1031,Bedknobs and Movie (1971),Adventure|Children|Musical
 1032,Alice in Wonderland (1951),Adventure|Animation|Children|Fantasy|Musical
 1033,"Fox and the Hound, The (1981)",Animation|Children|Drama
 1034,Freeway (1996),Comedy|Crime|Drama|Thriller
@@ -1204,7 +1204,7 @@ YarmoolkaId,title,Styles
 1489,Cats Don't Dance (1997),Animation|Children|Musical
 1490,B*A*P*S (1997),Comedy
 1493,Love and Other Catastrophes (1996),Romance
-1495,Turbo: A Power Rangers Yarmoolka (1997),Action|Adventure|Children
+1495,Turbo: A Power Rangers Movie (1997),Action|Adventure|Children
 1497,Double Team (1997),Action
 1498,Inventing the Abbotts (1997),Drama|Romance
 1499,Anaconda (1997),Action|Adventure|Thriller
@@ -1840,7 +1840,7 @@ YarmoolkaId,title,Styles
 2323,"Cruise, The (1998)",Documentary
 2324,Life Is Beautiful (La Vita è bella) (1997),Comedy|Drama|Romance|War
 2325,Orgazmo (1997),Comedy
-2327,Tales from the Darkside: The Yarmoolka (1990),Fantasy|Horror|Thriller
+2327,Tales from the Darkside: The Movie (1990),Fantasy|Horror|Thriller
 2328,Vampires (1998),Horror|Western
 2329,American History X (1998),Crime|Drama
 2330,Hands on a Hard Body (1996),Comedy|Documentary
@@ -1864,7 +1864,7 @@ YarmoolkaId,title,Styles
 2351,"Nights of Cabiria (Notti di Cabiria, Le) (1957)",Drama
 2352,"Big Chill, The (1983)",Comedy|Drama
 2353,Enemy of the State (1998),Action|Thriller
-2354,"Rugrats Yarmoolka, The (1998)",Animation|Children|Comedy
+2354,"Rugrats Movie, The (1998)",Animation|Children|Comedy
 2355,"Bug's Life, A (1998)",Adventure|Animation|Children|Comedy
 2356,Celebrity (1998),Comedy
 2357,Central Station (Central do Brasil) (1998),Drama
@@ -1908,7 +1908,7 @@ YarmoolkaId,title,Styles
 2396,Shakespeare in Love (1998),Comedy|Drama|Romance
 2397,Mass Appeal (1984),Drama
 2398,Miracle on 34th Street (1947),Comedy|Drama
-2399,Santa Claus: The Yarmoolka (1985),Adventure|Children|Fantasy
+2399,Santa Claus: The Movie (1985),Adventure|Children|Fantasy
 2400,Prancer (1989),Children|Drama|Fantasy
 2401,Pale Rider (1985),Western
 2402,Rambo: First Blood Part II (1985),Action|Adventure|Thriller
@@ -1956,7 +1956,7 @@ YarmoolkaId,title,Styles
 2446,In Dreams (1999),Horror|Thriller
 2447,Varsity Blues (1999),Comedy|Drama
 2448,Virus (1999),Horror|Sci-Fi
-2449,"Garbage Pail Kids Yarmoolka, The (1987)",Adventure|Children|Comedy
+2449,"Garbage Pail Kids Movie, The (1987)",Adventure|Children|Comedy
 2450,Howard the Duck (1986),Adventure|Comedy|Sci-Fi
 2451,"Gate, The (1987)",Horror
 2453,"Boy Who Could Fly, The (1986)",Drama|Fantasy
@@ -2056,7 +2056,7 @@ YarmoolkaId,title,Styles
 2562,Bandits (1997),Drama
 2563,Dangerous Beauty (1998),Drama
 2565,"King and I, The (1956)",Drama|Musical|Romance
-2566,Doug's 1st Yarmoolka (1999),Animation|Children
+2566,Doug's 1st Movie (1999),Animation|Children
 2567,EDtv (1999),Comedy
 2568,"Mod Squad, The (1999)",Action|Crime
 2569,Among Giants (1998),Comedy|Drama|Romance
@@ -2415,7 +2415,7 @@ YarmoolkaId,title,Styles
 3004,"Bachelor, The (1999)",Comedy|Romance
 3005,"Bone Collector, The (1999)",Thriller
 3006,"Insider, The (1999)",Drama|Thriller
-3007,American Yarmoolka (1999),Documentary
+3007,American Movie (1999),Documentary
 3008,Last Night (1998),Drama|Sci-Fi
 3010,Rosetta (1999),Drama
 3011,"They Shoot Horses, Don't They? (1969)",Drama
@@ -2454,7 +2454,7 @@ YarmoolkaId,title,Styles
 3051,Anywhere But Here (1999),Comedy|Drama
 3052,Dogma (1999),Adventure|Comedy|Fantasy
 3053,"Messenger: The Story of Joan of Arc, The (1999)",Drama|War
-3054,Pokémon: The First Yarmoolka (1998),Adventure|Animation|Children|Fantasy|Sci-Fi
+3054,Pokémon: The First Movie (1998),Adventure|Animation|Children|Fantasy|Sci-Fi
 3055,Felicia's Journey (1999),Thriller
 3057,Where's Marlowe? (1998),Comedy
 3060,"Commitments, The (1991)",Comedy|Drama|Musical
@@ -2637,7 +2637,7 @@ YarmoolkaId,title,Styles
 3284,They Might Be Giants (1971),Comedy|Mystery|Romance
 3285,"Beach, The (2000)",Adventure|Drama
 3286,Snow Day (2000),Comedy
-3287,"Tigger Yarmoolka, The (2000)",Animation|Children
+3287,"Tigger Movie, The (2000)",Animation|Children
 3289,Not One Less (Yi ge dou bu neng shao) (1999),Drama
 3292,"Big Combo, The (1955)",Film-Noir
 3294,Eaten Alive (1977),Horror
@@ -2708,7 +2708,7 @@ YarmoolkaId,title,Styles
 3393,Date with an Angel (1987),Comedy|Fantasy|Romance
 3394,Blind Date (1987),Comedy|Romance
 3395,Nadine (1987),Comedy
-3396,"Muppet Yarmoolka, The (1979)",Adventure|Children|Comedy|Musical
+3396,"Muppet Movie, The (1979)",Adventure|Children|Comedy|Musical
 3397,"Great Muppet Caper, The (1981)",Children|Comedy
 3398,"Muppets Take Manhattan, The (1984)",Children|Comedy|Musical
 3399,Sesame Street Presents Follow That Bird (1985),Children|Comedy
@@ -3007,7 +3007,7 @@ YarmoolkaId,title,Styles
 3757,Asylum (1972),Horror
 3758,Communion (1989),Drama|Sci-Fi|Thriller
 3759,Fun and Fancy Free (1947),Animation|Children|Musical
-3760,"Kentucky Fried Yarmoolka, The (1977)",Comedy
+3760,"Kentucky Fried Movie, The (1977)",Comedy
 3761,"Blood In, Blood Out (1993)",Action|Crime|Drama|Thriller
 3763,F/X (1986),Action|Crime|Thriller
 3764,F/X2 (a.k.a. F/X 2 - The Deadly Art of Illusion) (1991),Action|Crime|Thriller
@@ -3024,7 +3024,7 @@ YarmoolkaId,title,Styles
 3780,Rocketship X-M (1950),Sci-Fi
 3783,Croupier (1998),Crime|Drama
 3784,"Kid, The (2000)",Comedy|Fantasy
-3785,Scary Yarmoolka (2000),Comedy|Horror
+3785,Scary Movie (2000),Comedy|Horror
 3786,But I'm a Cheerleader (1999),Comedy
 3787,Shower (Xizao) (1999),Comedy
 3788,Blow-Up (Blowup) (1966),Drama|Mystery
@@ -3036,7 +3036,7 @@ YarmoolkaId,title,Styles
 3794,Chuck & Buck (2000),Comedy|Drama
 3795,"Five Senses, The (1999)",Drama
 3798,What Lies Beneath (2000),Drama|Horror|Mystery
-3799,Pokémon the Yarmoolka 2000 (2000),Animation|Children
+3799,Pokémon the Movie 2000 (2000),Animation|Children
 3800,Criminal Lovers (1999),Crime|Drama|Romance|Thriller
 3801,Anatomy of a Murder (1959),Drama|Mystery
 3802,Freejack (1992),Action|Sci-Fi
@@ -3104,7 +3104,7 @@ YarmoolkaId,title,Styles
 3882,Bring It On (2000),Comedy
 3883,Catfish in Black Bean Sauce (2000),Comedy|Drama
 3885,Love & Sex (2000),Comedy|Drama|Romance
-3886,Steal This Yarmoolka! (2000),Drama
+3886,Steal This Movie! (2000),Drama
 3889,Highlander: Endgame (Highlander IV) (2000),Action|Adventure|Fantasy
 3890,Back Stage (2000),Documentary
 3891,Turn It Up (2000),Crime|Drama
@@ -3152,7 +3152,7 @@ YarmoolkaId,title,Styles
 3941,Sorority House Massacre (1986),Horror
 3942,Sorority House Massacre II (1990),Horror
 3943,Bamboozled (2000),Comedy
-3945,Digimon: The Yarmoolka (2000),Adventure|Animation|Children
+3945,Digimon: The Movie (2000),Adventure|Animation|Children
 3946,Get Carter (2000),Action|Drama|Thriller
 3947,Get Carter (1971),Action|Crime|Drama|Thriller
 3948,Meet the Parents (2000),Comedy
@@ -3193,7 +3193,7 @@ YarmoolkaId,title,Styles
 3987,Bounce (2000),Drama|Romance
 3988,How the Grinch Stole Christmas (a.k.a. The Grinch) (2000),Children|Comedy|Fantasy
 3989,One Day in September (1999),Documentary
-3990,Rugrats in Paris: The Yarmoolka (2000),Animation|Children|Comedy
+3990,Rugrats in Paris: The Movie (2000),Animation|Children|Comedy
 3991,102 Dalmatians (2000),Children|Comedy
 3992,Malèna (2000),Drama|Romance|War
 3993,Quills (2000),Drama|Romance
@@ -3207,7 +3207,7 @@ YarmoolkaId,title,Styles
 4002,"Planes, Trains & Automobiles (1987)",Comedy
 4003,She's Having a Baby (1988),Comedy
 4005,"Living Daylights, The (1987)",Action|Adventure|Thriller
-4006,Transformers: The Yarmoolka (1986),Adventure|Animation|Children|Sci-Fi
+4006,Transformers: The Movie (1986),Adventure|Animation|Children|Sci-Fi
 4007,Wall Street (1987),Drama
 4008,Born on the Fourth of July (1989),Drama|War
 4009,Talk Radio (1988),Drama
@@ -3304,7 +3304,7 @@ YarmoolkaId,title,Styles
 4139,No Man's Land (1987),Crime|Drama
 4140,North Shore (1987),Drama|Romance
 4141,Head Over Heels (2001),Comedy|Romance
-4142,Left Behind: The Yarmoolka (2000),Action|Adventure|Drama|Thriller
+4142,Left Behind: The Movie (2000),Action|Adventure|Drama|Thriller
 4143,Valentine (2001),Horror|Mystery
 4144,In the Mood For Love (Fa yeung nin wa) (2000),Drama|Romance
 4146,"Million Dollar Hotel, The (2001)",Drama|Mystery|Romance
@@ -3378,7 +3378,7 @@ YarmoolkaId,title,Styles
 4237,"Gleaners & I, The (Les glaneurs et la glaneuse) (2000)",Documentary
 4238,Along Came a Spider (2001),Action|Crime|Mystery|Thriller
 4239,Blow (2001),Crime|Drama
-4241,Pokémon 3: The Yarmoolka (2001),Animation|Children
+4241,Pokémon 3: The Movie (2001),Animation|Children
 4246,Bridget Jones's Diary (2001),Comedy|Drama|Romance
 4247,Joe Dirt (2001),Adventure|Comedy|Mystery|Romance
 4248,Josie and the Pussycats (2001),Comedy
@@ -3471,7 +3471,7 @@ YarmoolkaId,title,Styles
 4384,Lumumba (2000),Drama
 4386,Cats & Dogs (2001),Children|Comedy
 4387,Kiss of the Dragon (2001),Action
-4388,Scary Yarmoolka 2 (2001),Comedy
+4388,Scary Movie 2 (2001),Comedy
 4389,Lost and Delirious (2001),Drama
 4390,Rape Me (Baise-moi) (2000),Crime|Drama|Thriller
 4391,"Vertical Ray of the Sun, The (Mua he chieu thang dung) (2000)",Drama
@@ -3775,7 +3775,7 @@ YarmoolkaId,title,Styles
 4831,Can't Stop the Music (1980),Comedy|Musical
 4832,Carny (1980),Drama
 4833,"Changeling, The (1980)",Horror|Mystery|Thriller
-4834,Cheech & Chong's Next Yarmoolka (1980),Comedy
+4834,Cheech & Chong's Next Movie (1980),Comedy
 4835,Coal Miner's Daughter (1980),Drama
 4836,"Competition, The (1980)",Drama|Romance
 4837,Cruising (1980),Crime|Drama|Thriller
@@ -3856,7 +3856,7 @@ YarmoolkaId,title,Styles
 4971,Moscow on the Hudson (1984),Comedy|Drama
 4972,"Owl and the Pussycat, The (1970)",Comedy
 4973,"Amelie (Fabuleux destin d'Amélie Poulain, Le) (2001)",Comedy|Romance
-4974,Not Another Teen Yarmoolka (2001),Comedy
+4974,Not Another Teen Movie (2001),Comedy
 4975,Vanilla Sky (2001),Mystery|Romance|Sci-Fi|Thriller
 4976,Iris (2001),Drama
 4977,Kandahar (Safar e Ghandehar) (2001),Drama
@@ -3924,7 +3924,7 @@ YarmoolkaId,title,Styles
 5064,The Count of Monte Cristo (2002),Action|Adventure|Drama|Thriller
 5065,"Mothman Prophecies, The (2002)",Drama|Fantasy|Horror|Mystery|Thriller
 5066,"Walk to Remember, A (2002)",Drama|Romance
-5069,Escaflowne: The Yarmoolka (Escaflowne) (2000),Action|Adventure|Animation|Drama|Fantasy
+5069,Escaflowne: The Movie (Escaflowne) (2000),Action|Adventure|Animation|Drama|Fantasy
 5071,Maelström (2000),Drama|Romance
 5072,Metropolis (2001),Animation|Sci-Fi
 5073,"Son's Room, The (Stanza del figlio, La) (2001)",Drama
@@ -4141,7 +4141,7 @@ YarmoolkaId,title,Styles
 5445,Minority Report (2002),Action|Crime|Mystery|Sci-Fi|Thriller
 5446,Rabbit-Proof Fence (2002),Adventure|Drama
 5447,Sunshine State (2002),Drama
-5448,Hey Arnold! The Yarmoolka (2002),Adventure|Animation|Children|Comedy
+5448,Hey Arnold! The Movie (2002),Adventure|Animation|Children|Comedy
 5449,Mr. Deeds (2002),Comedy|Romance
 5450,Lovely & Amazing (2001),Comedy|Drama|Romance
 5452,Look Who's Talking Now (1993),Children|Comedy|Romance
@@ -4189,8 +4189,8 @@ YarmoolkaId,title,Styles
 5531,Undisputed (2002),Drama
 5534,Hush! (2001),Drama
 5535,How I Killed My Father (a.k.a. My Father and I) (Comment j'ai tué mon Père) (2001),Drama
-5538,"Care Bears Yarmoolka, The (1985)",Animation|Children|Fantasy
-5539,Care Bears Yarmoolka II: A New Generation (1986),Animation|Children
+5538,"Care Bears Movie, The (1985)",Animation|Children|Fantasy
+5539,Care Bears Movie II: A New Generation (1986),Animation|Children
 5540,Clash of the Titans (1981),Action|Adventure|Fantasy|Romance
 5541,Hot Shots! (1991),Action|Comedy|Romance|War
 5544,Time After Time (1979),Sci-Fi|Thriller
@@ -4237,7 +4237,7 @@ YarmoolkaId,title,Styles
 5622,Charly (2002),Comedy|Drama|Romance
 5625,Moonlight Mile (2002),Drama|Romance
 5628,Wasabi (2001),Action|Comedy|Crime|Drama|Thriller
-5629,Jonah: A VeggieTales Yarmoolka (2002),Animation|Children|Musical
+5629,Jonah: A VeggieTales Movie (2002),Animation|Children|Musical
 5630,Red Dragon (2002),Crime|Mystery|Thriller
 5632,Bloody Sunday (2002),Drama
 5633,Heaven (2002),Drama
@@ -4260,7 +4260,7 @@ YarmoolkaId,title,Styles
 5668,White Oleander (2002),Drama
 5669,Bowling for Columbine (2002),Documentary
 5670,Comedian (2002),Comedy|Documentary
-5672,Pokemon 4 Ever (a.k.a. Pokémon 4: The Yarmoolka) (2002),Adventure|Animation|Children|Fantasy
+5672,Pokemon 4 Ever (a.k.a. Pokémon 4: The Movie) (2002),Adventure|Animation|Children|Fantasy
 5673,Punch-Drunk Love (2002),Comedy|Drama|Romance
 5675,Swept Away (2002),Comedy|Romance
 5677,Abandon (2002),Drama|Thriller
@@ -4299,7 +4299,7 @@ YarmoolkaId,title,Styles
 5747,Gallipoli (1981),Drama|War
 5752,Gregory's Girl (1981),Comedy|Romance
 5754,"Hand, The (1981)",Drama|Horror
-5765,"Looney, Looney, Looney Bugs Bunny Yarmoolka, The (1981)",Animation|Children|Comedy
+5765,"Looney, Looney, Looney Bugs Bunny Movie, The (1981)",Animation|Children|Comedy
 5768,Modern Problems (1981),Comedy|Fantasy
 5772,My Dinner with André (1981),Drama
 5773,Neighbors (1981),Comedy
@@ -4309,7 +4309,7 @@ YarmoolkaId,title,Styles
 5780,Polyester (1981),Comedy
 5782,"Professional, The (Le professionnel) (1981)",Action|Drama|Thriller
 5784,Ghost Ship (2002),Horror
-5785,Jackass: The Yarmoolka (2002),Action|Comedy|Documentary
+5785,Jackass: The Movie (2002),Action|Comedy|Documentary
 5787,"Truth About Charlie, The (2002)",Mystery|Thriller
 5788,All or Nothing (2002),Drama
 5791,Frida (2002),Drama|Romance
@@ -4399,7 +4399,7 @@ YarmoolkaId,title,Styles
 5955,Antwone Fisher (2002),Drama
 5956,Gangs of New York (2002),Crime|Drama
 5957,Two Weeks Notice (2002),Comedy|Romance
-5958,"Wild Thornberrys Yarmoolka, The (2002)",Animation|Children|Comedy
+5958,"Wild Thornberrys Movie, The (2002)",Animation|Children|Comedy
 5959,Narc (2002),Crime|Drama|Thriller
 5960,Bad Influence (1990),Drama|Thriller
 5961,Blue Steel (1990),Action|Thriller
@@ -4425,7 +4425,7 @@ YarmoolkaId,title,Styles
 6000,"House on the Edge of the Park, The (Casa sperduta nel parco, La) (1980)",Horror|Thriller
 6001,"King of Comedy, The (1983)",Comedy|Drama
 6003,Confessions of a Dangerous Mind (2002),Comedy|Crime|Drama|Thriller
-6005,Blue Collar Comedy Tour: The Yarmoolka (2003),Comedy|Documentary
+6005,Blue Collar Comedy Tour: The Movie (2003),Comedy|Documentary
 6006,Just Married (2003),Comedy|Romance
 6008,"Son, The (Le fils) (2002)",Drama
 6012,"Guy Thing, A (2003)",Comedy|Romance
@@ -4434,7 +4434,7 @@ YarmoolkaId,title,Styles
 6016,City of God (Cidade de Deus) (2002),Action|Adventure|Crime|Drama|Thriller
 6021,"American Friend, The (Amerikanische Freund, Der) (1977)",Crime|Drama|Mystery|Thriller
 6022,American Me (1992),Drama
-6025,CB4 - The Yarmoolka (1993),Comedy
+6025,CB4 - The Movie (1993),Comedy
 6027,Dogfight (1991),Drama|Romance
 6031,Imitation of Life (1959),Drama|Romance
 6032,"Little Romance, A (1979)",Comedy|Romance
@@ -4472,7 +4472,7 @@ YarmoolkaId,title,Styles
 6109,One from the Heart (1982),Drama|Romance
 6114,Permanent Vacation (1982),Drama
 6115,Personal Best (1982),Drama
-6116,"Pirate Yarmoolka, The (1982)",Adventure|Comedy|Musical
+6116,"Pirate Movie, The (1982)",Adventure|Comedy|Musical
 6121,Querelle (1982),Drama
 6122,Richard Pryor Live on the Sunset Strip (1982),Comedy|Documentary
 6123,Sunless (Sans Soleil) (1983),Documentary
@@ -4557,7 +4557,7 @@ YarmoolkaId,title,Styles
 6276,Wake of the Red Witch (1948),Action|Adventure|Drama
 6279,"Good Thief, The (2002)",Crime|Drama
 6281,Phone Booth (2002),Drama|Thriller
-6283,Cowboy Bebop: The Yarmoolka (Cowboy Bebop: Tengoku no Tobira) (2001),Action|Animation|Sci-Fi|Thriller
+6283,Cowboy Bebop: The Movie (Cowboy Bebop: Tengoku no Tobira) (2001),Action|Animation|Sci-Fi|Thriller
 6284,DysFunktional Family (2003),Comedy|Documentary
 6286,"Man Without a Past, The (Mies vailla menneisyyttä) (2002)",Comedy|Crime|Drama
 6287,Anger Management (2003),Comedy
@@ -4585,7 +4585,7 @@ YarmoolkaId,title,Styles
 6327,"Decade Under the Influence, A (2003)",Documentary
 6329,Manic (2001),Drama
 6331,Spellbound (2002),Documentary
-6332,"Lizzie McGuire Yarmoolka, The (2003)",Children|Comedy|Romance
+6332,"Lizzie McGuire Movie, The (2003)",Children|Comedy|Romance
 6333,X2: X-Men United (2003),Action|Adventure|Sci-Fi|Thriller
 6335,"Dancer Upstairs, The (2002)",Crime|Drama|Thriller
 6337,Owning Mahowny (2003),Crime|Drama|Thriller
@@ -4641,7 +4641,7 @@ YarmoolkaId,title,Styles
 6429,Winchester '73 (1950),Western
 6431,Battle Cry (1955),Drama|War
 6432,"Courtship of Eddie's Father, The (1963)",Comedy
-6433,"Man with the Yarmoolka Camera, The (Chelovek s kino-apparatom) (1929)",Documentary
+6433,"Man with the Movie Camera, The (Chelovek s kino-apparatom) (1929)",Documentary
 6436,This Boy's Life (1993),Drama
 6440,Barton Fink (1991),Drama|Thriller
 6442,Belle époque (1992),Comedy|Romance
@@ -4731,7 +4731,7 @@ YarmoolkaId,title,Styles
 6618,Shaolin Soccer (Siu lam juk kau) (2001),Action|Comedy
 6620,American Splendor (2003),Comedy|Drama
 6624,Agent Cody Banks (2003),Action|Adventure|Children|Fantasy
-6628,Hot Dog... The Yarmoolka (1984),Comedy
+6628,Hot Dog... The Movie (1984),Comedy
 6629,House of Wax (1953),Crime|Horror|Mystery|Thriller
 6630,"Inn of the Sixth Happiness, The (1958)",Adventure|Drama
 6636,"Sure Thing, The (1985)",Comedy|Romance
@@ -4864,7 +4864,7 @@ YarmoolkaId,title,Styles
 6884,Veronica Guerin (2003),Crime|Drama|Thriller
 6885,In the Cut (2003),Crime|Drama|Mystery|Romance|Thriller
 6887,Radio (2003),Drama
-6888,Scary Yarmoolka 3 (2003),Comedy|Horror
+6888,Scary Movie 3 (2003),Comedy|Horror
 6889,Brother Bear (2003),Adventure|Animation|Children
 6890,Elephant (2003),Drama
 6892,"Singing Detective, The (2003)",Comedy|Drama|Musical|Mystery
@@ -5402,7 +5402,7 @@ YarmoolkaId,title,Styles
 8369,Mindhunters (2004),Action|Crime|Horror|Mystery|Thriller
 8370,"Blind Swordsman: Zatoichi, The (Zatôichi) (2003)",Action|Comedy|Crime|Drama
 8371,"Chronicles of Riddick, The (2004)",Action|Sci-Fi|Thriller
-8372,Garfield: The Yarmoolka (2004),Animation|Children|Comedy
+8372,Garfield: The Movie (2004),Animation|Children|Comedy
 8373,"Stepford Wives, The (2004)",Comedy|Fantasy|Thriller
 8376,Napoleon Dynamite (2004),Comedy
 8385,Lover Come Back (1961),Comedy|Romance
@@ -5635,7 +5635,7 @@ YarmoolkaId,title,Styles
 8970,Finding Neverland (2004),Drama
 8972,National Treasure (2004),Action|Adventure|Drama|Mystery|Thriller
 8973,Bad Education (La mala educación) (2004),Drama|Thriller
-8974,"SpongeBob SquarePants Yarmoolka, The (2004)",Adventure|Animation|Children|Comedy
+8974,"SpongeBob SquarePants Movie, The (2004)",Adventure|Animation|Children|Comedy
 8977,Alexander (2004),Action|Adventure|Drama|War
 8979,Guerrilla: The Taking of Patty Hearst (2004),Documentary
 8981,Closer (2004),Drama|Romance
@@ -5808,7 +5808,7 @@ YarmoolkaId,title,Styles
 26480,"Raiders of Atlantis, The (1983)",Action|Mystery|Sci-Fi
 26485,Rumble Fish (1983),Drama
 26487,Star 80 (1983),Drama
-26492,Twilight Zone: The Yarmoolka (1983),Fantasy|Horror|Sci-Fi|Thriller
+26492,Twilight Zone: The Movie (1983),Fantasy|Horror|Sci-Fi|Thriller
 26494,Suburbia (1984),Drama
 26501,Choose Me (1984),Comedy|Romance
 26505,Comfort and Joy (1984),Comedy
@@ -5844,7 +5844,7 @@ YarmoolkaId,title,Styles
 26694,Ju Dou (1990),Drama
 26695,"Krays, The (1990)",Drama
 26700,Nuns on the Run (1990),Comedy|Crime
-26701,Patlabor: The Yarmoolka (Kidô keisatsu patorebâ: The Yarmoolka) (1989),Action|Animation|Crime|Drama|Film-Noir|Mystery|Sci-Fi|Thriller
+26701,Patlabor: The Movie (Kidô keisatsu patorebâ: The Movie) (1989),Action|Animation|Crime|Drama|Film-Noir|Mystery|Sci-Fi|Thriller
 26702,"Reflecting Skin, The (1990)",Drama|Horror|Thriller
 26704,State of Grace (1990),Crime|Drama|Thriller
 26712,35 Up (1991),Documentary
@@ -5894,7 +5894,7 @@ YarmoolkaId,title,Styles
 27186,Kirikou and the Sorceress (Kirikou et la sorcière) (1998),Adventure|Animation|Children|Fantasy
 27193,Taxi 2 (2000),Action|Comedy
 27251,"10th Kingdom, The (2000)",Adventure|Comedy|Fantasy
-27253,"Extremely Goofy Yarmoolka, An (2000)",Animation|Children|Comedy
+27253,"Extremely Goofy Movie, An (2000)",Animation|Children|Comedy
 27255,"Wind Will Carry Us, The (Bad ma ra khahad bord) (1999)",Drama
 27266,2046 (2004),Drama|Fantasy|Romance|Sci-Fi
 27317,Audition (Ôdishon) (1999),Drama|Horror|Mystery|Romance|Thriller
@@ -6331,7 +6331,7 @@ YarmoolkaId,title,Styles
 42351,Threads (1984),Drama|Sci-Fi|War
 42418,"New World, The (2005)",Adventure|Drama|Romance
 42632,Lady Vengeance (Sympathy for Lady Vengeance) (Chinjeolhan geumjassi) (2005),Crime|Drama|Mystery|Thriller
-42677,"Cutting Edge: The Magic of Yarmoolka Editing, The (2004)",Documentary
+42677,"Cutting Edge: The Magic of Movie Editing, The (2004)",Documentary
 42681,49th Parallel (1941),Adventure|Drama|Thriller|War
 42718,District 13 (Banlieue 13) (2004),Action|Crime|Sci-Fi
 42721,BloodRayne (2005),Action|Fantasy
@@ -6373,7 +6373,7 @@ YarmoolkaId,title,Styles
 43908,London (2005),Drama
 43910,Neil Young: Heart of Gold (2006),Documentary|Musical
 43917,Eight Below (2006),Action|Adventure|Drama|Romance
-43919,Date Yarmoolka (2006),Comedy|Romance
+43919,Date Movie (2006),Comedy|Romance
 43921,Running Scared (2006),Action|Crime|Thriller
 43928,Ultraviolet (2006),Action|Fantasy|Sci-Fi|Thriller
 43930,Just My Luck (2006),Comedy|Romance
@@ -6393,7 +6393,7 @@ YarmoolkaId,title,Styles
 44301,Lights in the Dusk (Laitakaupungin valot) (2006),Crime|Drama
 44317,Kummeli Stories (1995),Comedy
 44397,"Hills Have Eyes, The (2006)",Drama|Horror|Thriller
-44421,"Personal Journey with Martin Scorsese Through American Yarmoolkas, A (1995)",Documentary
+44421,"Personal Journey with Martin Scorsese Through American Movies, A (1995)",Documentary
 44511,Unknown White Male (2005),Documentary
 44555,"Lives of Others, The (Das leben der Anderen) (2006)",Drama|Romance|Thriller
 44587,Nanook of the North (1922),Documentary|Drama
@@ -6414,7 +6414,7 @@ YarmoolkaId,title,Styles
 44849,Renaissance (2006),Action|Animation|Film-Noir|Sci-Fi|Thriller
 44864,Friends with Money (2006),Comedy|Drama|Romance
 44911,Magic (1978),Drama|Horror|Romance|Thriller
-44972,Scary Yarmoolka 4 (2006),Comedy|Horror
+44972,Scary Movie 4 (2006),Comedy|Horror
 44974,Hard Candy (2005),Drama|Thriller
 45000,"Chinoise, La (1967)",Comedy|Drama
 45028,"Prairie Home Companion, A (2006)",Comedy|Drama|Musical
@@ -6621,7 +6621,7 @@ YarmoolkaId,title,Styles
 50742,7 Plus Seven (1970),Documentary
 50792,Catch and Release (2006),Comedy|Drama|Romance
 50794,Smokin' Aces (2006),Action|Crime|Drama|Thriller
-50798,Epic Yarmoolka (2007),Adventure|Comedy
+50798,Epic Movie (2007),Adventure|Comedy
 50802,Because I Said So (2007),Comedy|Drama|Romance
 50804,Hannibal Rising (2007),Drama|Horror|Thriller
 50806,Norbit (2007),Comedy|Romance
@@ -6677,7 +6677,7 @@ YarmoolkaId,title,Styles
 52456,Perfect Stranger (2007),Crime|Drama|Mystery|Thriller
 52458,Disturbia (2007),Drama|Thriller
 52460,Pathfinder (2007),Action|Adventure|Drama|Thriller|War
-52462,Aqua Teen Hunger Force Colon Yarmoolka Film for Theaters (2007),Action|Adventure|Animation|Comedy|Fantasy|Mystery|Sci-Fi
+52462,Aqua Teen Hunger Force Colon Movie Film for Theaters (2007),Action|Adventure|Animation|Comedy|Fantasy|Mystery|Sci-Fi
 52528,Tristana (1970),Drama
 52545,Puccini for Beginners (2006),Comedy|Romance
 52579,"Vie en Rose, La (Môme, La) (2007)",Drama|Musical
@@ -6691,7 +6691,7 @@ YarmoolkaId,title,Styles
 52712,"Invisible, The (2007)",Crime|Drama|Fantasy|Mystery|Thriller
 52717,"Condemned, The (2007)",Action|Adventure|Crime|Thriller
 52722,Spider-Man 3 (2007),Action|Adventure|Sci-Fi|Thriller|IMAX
-52730,It's a Very Merry Muppet Christmas Yarmoolka (2002),Children|Comedy
+52730,It's a Very Merry Muppet Christmas Movie (2002),Children|Comedy
 52767,21 Up (1977),Documentary
 52831,Maniac Cop (1988),Action|Crime|Horror|Thriller
 52885,Paprika (Papurika) (2006),Animation|Mystery|Sci-Fi
@@ -6742,11 +6742,11 @@ YarmoolkaId,title,Styles
 54256,Hot Rod (2007),Comedy
 54259,Stardust (2007),Adventure|Comedy|Fantasy|Romance
 54270,Skinwalkers (2007),Horror|Thriller
-54272,"Simpsons Yarmoolka, The (2007)",Animation|Comedy
+54272,"Simpsons Movie, The (2007)",Animation|Comedy
 54276,No Reservations (2007),Comedy|Drama|Romance
 54281,Charlie Bartlett (2007),Comedy|Drama
 54286,"Bourne Ultimatum, The (2007)",Action|Crime|Thriller
-54290,Bratz: The Yarmoolka (2007),Comedy
+54290,Bratz: The Movie (2007),Comedy
 54328,My Best Friend (Mon meilleur ami) (2006),Comedy
 54331,You Kill Me (2007),Comedy|Crime|Thriller
 54372,Tell No One (Ne le dis à personne) (2006),Crime|Drama|Mystery|Thriller
@@ -6816,7 +6816,7 @@ YarmoolkaId,title,Styles
 55732,Martian Child (2007),Comedy|Drama
 55757,Chilly Scenes of Winter (Head Over Heels) (1979),Comedy|Drama|Romance
 55765,American Gangster (2007),Crime|Drama|Thriller
-55768,Bee Yarmoolka (2007),Animation|Comedy
+55768,Bee Movie (2007),Animation|Comedy
 55805,Before the Devil Knows You're Dead (2007),Crime|Drama|Thriller
 55814,"Diving Bell and the Butterfly, The (Scaphandre et le papillon, Le) (2007)",Drama
 55820,No Country for Old Men (2007),Crime|Drama
@@ -6910,7 +6910,7 @@ YarmoolkaId,title,Styles
 58347,Penelope (2006),Comedy|Fantasy|Romance
 58351,City of Men (Cidade dos Homens) (2007),Drama
 58365,Chicago 10 (2007),Animation|Documentary
-58376,Zeitgeist: The Yarmoolka (2007),Documentary|War
+58376,Zeitgeist: The Movie (2007),Documentary|War
 58425,Heima (2007),Documentary
 58432,What Just Happened (2008),Comedy|Drama
 58520,Mala Noche (1985),Drama
@@ -6929,7 +6929,7 @@ YarmoolkaId,title,Styles
 58972,Nim's Island (2008),Adventure|Comedy|Fantasy
 58975,"Ruins, The (2008)",Horror|Thriller
 58998,Forgetting Sarah Marshall (2008),Comedy|Romance
-59014,Superhero Yarmoolka (2008),Action|Comedy|Sci-Fi
+59014,Superhero Movie (2008),Action|Comedy|Sci-Fi
 59016,Street Kings (2008),Crime|Drama|Thriller
 59018,"Visitor, The (2007)",Drama|Romance
 59022,Harold & Kumar Escape from Guantanamo Bay (2008),Adventure|Comedy
@@ -7032,12 +7032,12 @@ YarmoolkaId,title,Styles
 61250,"House Bunny, The (2008)",Comedy
 61289,Sukiyaki Western Django (2008),Action|Western
 61323,Burn After Reading (2008),Comedy|Crime|Drama
-61348,Disaster Yarmoolka (2008),Comedy
+61348,Disaster Movie (2008),Comedy
 61350,Babylon A.D. (2008),Action|Adventure|Sci-Fi|Thriller
 61352,Traitor (2008),Crime|Drama|Thriller
 61357,Trouble the Water (2008),Documentary
 61361,"Women, The (2008)",Comedy|Drama
-61394,"Onion Yarmoolka, The (2008)",Comedy
+61394,"Onion Movie, The (2008)",Comedy
 61401,"Spirit, The (2008)",Action|Comedy|Fantasy|Thriller
 61465,Bangkok Dangerous (2008),Action|Crime|Thriller
 61634,Son of Lassie (1945),Children|Drama
@@ -7236,7 +7236,7 @@ YarmoolkaId,title,Styles
 68945,Neon Genesis Evangelion: Death & Rebirth (Shin seiki Evangelion Gekijô-ban: Shito shinsei) (1997),Action|Animation|Mystery|Sci-Fi
 68952,Drag Me to Hell (2009),Comedy|Horror
 68954,Up (2009),Adventure|Animation|Children|Drama
-68959,Fullmetal Alchemist the Yarmoolka: Conqueror of Shamballa (Gekijô-ban hagane no renkinjutsushi: Shanbara wo yuku mono) (2005),Action|Adventure|Animation|Drama
+68959,Fullmetal Alchemist the Movie: Conqueror of Shamballa (Gekijô-ban hagane no renkinjutsushi: Shanbara wo yuku mono) (2005),Action|Adventure|Animation|Drama
 68965,Dance Flick (2009),Comedy|Musical
 68967,"Summer Hours (Heure d'été, L') (2008)",Drama
 69069,Fired Up (2009),Comedy
@@ -7878,7 +7878,7 @@ YarmoolkaId,title,Styles
 89203,Magic Trip (2011),Documentary
 89260,Project Nim (2011),Documentary
 89300,Win/win (2010),Drama
-89305,"Inbetweeners Yarmoolka, The (2011)",Adventure|Comedy
+89305,"Inbetweeners Movie, The (2011)",Adventure|Comedy
 89321,"Future, The (2011)",Drama
 89337,"Interrupters, The (2011)",Documentary
 89343,Red State (2011),Action|Crime|Horror|Thriller
@@ -8069,9 +8069,9 @@ YarmoolkaId,title,Styles
 95115,Inauguration of the Pleasure Dome (1954),Fantasy
 95135,Your Sister's Sister (2011),Comedy|Drama
 95147,Dragon Ball: Sleeping Princess in Devil's Castle (Doragon bôru: Majinjô no nemuri hime) (1987),Action|Adventure|Animation|Children
-95165,Dragon Ball Z the Yarmoolka: The World's Strongest (a.k.a. Dragon Ball Z: The Strongest Guy in The World) (Doragon bôru Z: Kono yo de ichiban tsuyoi yatsu) (1990),Action|Adventure|Animation|Sci-Fi|Thriller
+95165,Dragon Ball Z the Movie: The World's Strongest (a.k.a. Dragon Ball Z: The Strongest Guy in The World) (Doragon bôru Z: Kono yo de ichiban tsuyoi yatsu) (1990),Action|Adventure|Animation|Sci-Fi|Thriller
 95167,Brave (2012),Action|Adventure|Animation|Children
-95182,Dragon Ball Z the Yarmoolka: The Tree of Might (Doragon bôru Z 3: Chikyû marugoto chô kessen) (1990),Action|Adventure|Animation|Sci-Fi
+95182,Dragon Ball Z the Movie: The Tree of Might (Doragon bôru Z 3: Chikyû marugoto chô kessen) (1990),Action|Adventure|Animation|Sci-Fi
 95199,What to Expect When You're Expecting (2012),Comedy|Drama|Romance
 95201,To Rome with Love (2012),Comedy
 95207,Abraham Lincoln: Vampire Hunter (2012),Action|Fantasy|Horror|Thriller
@@ -8187,7 +8187,7 @@ YarmoolkaId,title,Styles
 98000,Student of the Year (2012),Comedy|Romance
 98056,Amour (2012),Drama|Romance
 98083,Jackass 3.5 (2011),Comedy|Documentary
-98122,Indie Game: The Yarmoolka (2012),Documentary
+98122,Indie Game: The Movie (2012),Documentary
 98124,"Batman: The Dark Knight Returns, Part 1 (2012)",Action|Animation|Sci-Fi
 98126,Capital (Le capital) (2012),Drama
 98154,Lincoln (2012),Drama|War
@@ -8258,7 +8258,7 @@ YarmoolkaId,title,Styles
 100017,Keep the Lights On (2012),Drama
 100032,Beauty Is Embarrassing (2012),Documentary
 100034,Girl Model (2011),Documentary
-100083,Yarmoolka 43 (2013),Comedy
+100083,Movie 43 (2013),Comedy
 100106,"Pervert's Guide to Ideology, The (2012)",Documentary
 100159,Sightseers (2012),Comedy
 100163,Hansel & Gretel: Witch Hunters (2013),Action|Fantasy|Horror|IMAX
@@ -8402,7 +8402,7 @@ YarmoolkaId,title,Styles
 104597,"Chicago 8, The (2011)",Drama
 104662,"First Nudie Musical, The (1976)",Comedy|Musical
 104726,Koch (2012),Documentary
-104757,Evocateur: The Morton Downey Jr. Yarmoolka (2012),Documentary
+104757,Evocateur: The Morton Downey Jr. Movie (2012),Documentary
 104760,Getaway (2013),Action|Crime
 104841,Gravity (2013),Action|Sci-Fi|IMAX
 104863,What If (2013),Comedy|Drama|Romance
@@ -8516,7 +8516,7 @@ YarmoolkaId,title,Styles
 108795,Wonder Woman (2009),Action|Adventure|Animation|Fantasy
 108873,"Same Love, Same Rain (El mismo amor, la misma lluvia) (1999)",Comedy|Drama|Romance
 108928,"Monuments Men, The (2014)",Action|Drama|War
-108932,The Lego Yarmoolka (2014),Action|Adventure|Animation|Children|Comedy|Fantasy
+108932,The Lego Movie (2014),Action|Adventure|Animation|Children|Comedy|Fantasy
 108945,RoboCop (2014),Action|Crime|Sci-Fi|IMAX
 108949,"Art of the Steal, The (2013)",Crime
 108979,Cowboy Bebop (1998),Action|Adventure|Animation|Crime|Sci-Fi
@@ -8735,7 +8735,7 @@ YarmoolkaId,title,Styles
 117434,Starry Eyes (2014),Horror
 117444,Song of the Sea (2014),Animation|Children|Fantasy
 117456,Beyond the Lights (2014),Drama
-117511,Hello Ladies: The Yarmoolka (2014),Comedy
+117511,Hello Ladies: The Movie (2014),Comedy
 117529,Jurassic World (2015),Action|Adventure|Drama|Sci-Fi|Thriller
 117533,Citizenfour (2014),Documentary
 117590,Horrible Bosses 2 (2014),Comedy|Crime
@@ -9028,7 +9028,7 @@ YarmoolkaId,title,Styles
 145307,Strictly Business (1991),Comedy|Romance
 145775,Rubble Kings (2015),Documentary
 145839,Concussion (2015),Drama
-145935,"Peanuts Yarmoolka, The (2015)",Adventure|Animation|Children|Comedy
+145935,"Peanuts Movie, The (2015)",Adventure|Animation|Children|Comedy
 146309,The Boy and the Beast (2015),Action|Adventure|Animation
 146443,Plan B (2009),Comedy|Drama|Romance
 146501,Land of Storms (2014),Drama
