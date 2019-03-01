@@ -68,9 +68,11 @@ namespace Controllers
             var recommender = new GenericUserBasedRecommender(plusAnonymModel, neighborhood, similarity);
             var recommendedItems = recommender.Recommend(PlusAnonymousUserDataModel.TEMP_USER_ID, 5, null);
 
+            Dictionary<string, object> DictionaryResult = new Dictionary<string, object>();
+           
             return Json(recommendedItems.Select(ri => new Dictionary<string, object>() {
                 {"film_id", ri.GetItemID() },
-                {"rating", ri.GetValue() },
+                {"rating", ri.GetValue() }
             }).ToArray());
         }
 
@@ -97,18 +99,18 @@ namespace Controllers
             return dataModel;
         }
 
-        public ActionResult GetYarmoolkas()
+        public ActionResult GetMovies()
         {
 
             var webRoot = _env.WebRootPath;
             var file = System.IO.Path.Combine(webRoot, "movies.csv");
 
             var csv = new CsvReader(new StreamReader(file));
-            var records = csv.GetRecords<YarmoolkaRecord>();
+            var records = csv.GetRecords<MovieRecord>();
             return Json(records);
         }
 
-        public class YarmoolkaRecord
+        public class MovieRecord
         {
             public int YarmoolkaId { get; set; }
             public string title { get; set; }
