@@ -112,7 +112,7 @@ namespace Controllers
 
         public class MovieRecord
         {
-            public int YarmoolkaId { get; set; }
+            public int MovieId { get; set; }
             public string title { get; set; }
         }
 

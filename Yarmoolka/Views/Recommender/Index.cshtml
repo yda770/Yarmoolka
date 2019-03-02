@@ -65,8 +65,8 @@
 				var movieTitles = [];
 				for (var i = 0; i < window.moviesData.length; i++) {
 					var movieData = window.moviesData[i];
-					console.log(movieData);
-                    movieIdToData[movieData.yarmoolkaId.toString()] = movieData;
+					//console.log(movieData);
+                    movieIdToData[movieData.movieId.toString()] = movieData;
 					movieTitleToData[movieData.title] = movieData;
 					movieTitles.push(movieData.title);
 				}
@@ -77,7 +77,7 @@
 					if (movieTitleToData[val]) {
 						var movieData = movieTitleToData[val];
 						var $tr = $('<tr class="film"><td><span class="title"></span><a href="javascript:void(0)" class="pull-right remove">X</a></td></tr>');
-                        $tr.attr('data-film-id', movieData.yarmoolkaId)
+                        $tr.attr('data-film-id', movieData.movieId)
 						var $title = $tr.find('.title');
 						$title.text(movieData.title);
 
