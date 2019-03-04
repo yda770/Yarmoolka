@@ -215,7 +215,6 @@ namespace Yarmoolka.Migrations
                     Size = table.Column<int>(nullable: false),
                     Color = table.Column<string>(nullable: true),
                     SupplierId = table.Column<int>(nullable: false),
-                    File = table.Column<string>(nullable:true)
                 },
                 constraints: table =>
                 {

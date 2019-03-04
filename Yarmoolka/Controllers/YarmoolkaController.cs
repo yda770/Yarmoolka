@@ -163,7 +163,7 @@ namespace Yarmoolka.Controllers
         [HttpPost]
         [ValidateAntiForgeryToken]
         [Microsoft.AspNetCore.Authorization.Authorize(Policy = "RequireAdminRole")]
-        public async Task<IActionResult> Edit(int id, [Bind("ID,Name,ModelDate,Style,Price,Company,Size,Color,SupplierId")] Models.YarmoolkaClass Yarmoolka)
+        public async Task<IActionResult> Edit(int id, [Bind("ID,Name,ModelDate,Style,Price,Company,Size,Color,SupplierId,File")] Models.YarmoolkaClass Yarmoolka)
         {
             if (id != Yarmoolka.ID)
             {
