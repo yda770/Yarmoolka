@@ -214,7 +214,8 @@ namespace Yarmoolka.Migrations
                     Company = table.Column<string>(nullable: false),
                     Size = table.Column<int>(nullable: false),
                     Color = table.Column<string>(nullable: true),
-                    SupplierId = table.Column<int>(nullable: false)
+                    SupplierId = table.Column<int>(nullable: false),
+                    File = table.Column<string>(nullable:true)
                 },
                 constraints: table =>
                 {

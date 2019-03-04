@@ -29,7 +29,9 @@ namespace Yarmoolka.Models
         [Display(Name = "Supplier")]
         public int SupplierId { get; set; }
 
-        
+        [Display(Name = "File")]
+        public string File { get; set; }
+
         public virtual Supplier YarmoolkaSupplier { get; set; }
     }
 }
