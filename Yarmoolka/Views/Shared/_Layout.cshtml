@@ -37,17 +37,17 @@
             </div>
             <div class="navbar-collapse collapse">
 				<ul class="nav navbar-nav">
-					<li><a asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
-					<li><a asp-area="" asp-controller="StoreBranches" asp-action="MapView">Branches</a></li>
-					<li><a asp-area="" asp-controller="Yarmoolkas" asp-action="Search">Yarmoolkas</a></li>
-					<li><a asp-area="" asp-controller="customers" asp-action="Search">Customer</a></li>
-					<li><a asp-area="" asp-controller="Recommender" asp-action="index">"SERET" Recommender</a></li>
-					<li><a asp-area="" asp-controller="Statistic" asp-action="index">Statistics</a></li>
+					<li><a class="@(ViewContext.RouteData.Values["Controller"].ToString() == "Home" ? "active" : "")" asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
+					<li><a class="@(ViewContext.RouteData.Values["Controller"].ToString() == "StoreBranches" ? "active" : "")" asp-area="" asp-controller="StoreBranches" asp-action="MapView">Branches</a></li>
+					<li><a class="@(ViewContext.RouteData.Values["Controller"].ToString() == "Yarmoolkas" ? "active" : "")" asp-area="" asp-controller="Yarmoolkas" asp-action="Search">Yarmoolkas</a></li>
+					<li><a class="@(ViewContext.RouteData.Values["Controller"].ToString() == "customers" ? "active" : "")" asp-area="" asp-controller="customers" asp-action="Search">Customer</a></li>
+					<li><a class="@(ViewContext.RouteData.Values["Controller"].ToString() == "Recommender" ? "active" : "")" asp-area="" asp-controller="Recommender" asp-action="index">"SERET" Recommender</a></li>
+					<li><a class="@(ViewContext.RouteData.Values["Controller"].ToString() == "Statistic" ? "active" : "")" asp-area="" asp-controller="Statistic" asp-action="index">Statistics</a></li>
 
                     @if (User.IsInRole("Admin"))
                     {
-                        <li><a asp-area="" asp-controller="suppliers" asp-action="Search">Suppliers</a></li>
-                        <li><a asp-area="" asp-controller="Admin" asp-action="Index">Admin</a></li>
+                        <li><a class="@(ViewContext.RouteData.Values["Controller"].ToString() == "suppliers" ? "active" : "")" asp-area="" asp-controller="suppliers" asp-action="Search">Suppliers</a></li>
+                        <li><a class="@(ViewContext.RouteData.Values["Controller"].ToString() == "Admin" ? "active" : "")" asp-area="" asp-controller="Admin" asp-action="Index">Admin</a></li>
                     }
                 </ul>
                 @await Html.PartialAsync("_LoginPartial")

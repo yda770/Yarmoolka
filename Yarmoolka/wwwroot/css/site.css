@@ -5,6 +5,9 @@
     /*width: 1220px;*/
     width:calc(100vw - 30px);
 }
+.navbar-nav li a.active{
+    color:white;
+}
 @media (max-width: 1235px) {
     .navbar-brand {
         display:none;

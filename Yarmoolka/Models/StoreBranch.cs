@@ -13,10 +13,10 @@ namespace Yarmoolka.Models
         public string BrnachName { get; set; }
         [Required]
         public string OpeningHours { get; set; }
-        [Range(34.0,35.0)]
+        //[Range(34.0,35.0)]
         [Required]
         public string Longitude { get; set; }
-        [Range(32.0, 33.0)]
+       // [Range(32.0, 33.0)]
         [Required]
         public string Latitude { get; set; }
     }
