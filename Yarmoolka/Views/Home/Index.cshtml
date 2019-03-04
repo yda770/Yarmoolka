@@ -2,9 +2,6 @@
     ViewData["Title"] = "Home Page";
 }
 
-
-
-
 <div id="large-header" class="large-header">
     <canvas id="demo-canvas"></canvas>
     <h1 id="main-title">Yarmoolka <span class="thin">Store</span></h1>
@@ -18,14 +15,9 @@
     </div>
     <div class="panel-body ">
         <div class="well">
-
             <video controls src="~/Yarmoolka.mp4" style="width: 100%;"> </video>
-
         </div>
-
-
     </div>
-
 </div>
 
 <div id="fb-root"></div>
@@ -50,45 +42,16 @@
     <a href="https://www.facebook.com/facebook">‏‎Facebook‎‏ loading</a></blockquote></div>
 </div>
 
-@*<aside id="twitterbox">
-
-        <div class="panel panel-primary">
-            <div class="panel-heading">
-                lateset news from today Yarmoolkas
-            </div>
-            <div class="panel-body ">
-                <div id="twitterrows">
-
-                </div>
-
-
-            </div>
-
-        </div>
-
-        <br stle="clear: both" />
-
-    </aside>*@
-
-
-
 @section scripts {
     <script type="text/javascript">
         $(function () {
-
-
             $.getJSON("../Home/GetTweets", function (res) {
                 const x = res.map(tweet => "<tr><td>" + tweet + "</td><tr>").reduce((acc, next) => acc + next);
                 const table = "<table class='table table-striped'>" + x + "</table>"
                 $("#twitterRows").html(table).addClass('animated flip');;
-
             });
-
-
-
         });
     </script>
-
 
     <script src="~/js/home.js"></script>
     <script src="~/js/TweenLite.min.js"></script>
@@ -102,5 +65,4 @@
     <link rel="stylesheet" type="text/css" href="~/css/normalize.css" />
     <link rel="stylesheet" type="text/css" href="~/css/demo.css" />
     <link rel="stylesheet" type="text/css" href="~/css/component.css" />
-
 }
