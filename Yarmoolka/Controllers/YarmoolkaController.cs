@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System.Web;
+using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
@@ -129,6 +130,7 @@ namespace Yarmoolka.Controllers
         [Microsoft.AspNetCore.Authorization.Authorize(Policy = "RequireAdminRole")]
         public async Task<IActionResult> Create([Bind("ID,Name,ModelDate,Style,Price,Company,Size,Color,SupplierId,File")] Models.YarmoolkaClass Yarmoolka)
         {
+            
             if (ModelState.IsValid)
             {
                 _context.Add(Yarmoolka);
