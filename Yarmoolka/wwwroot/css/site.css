@@ -1,7 +1,20 @@
 ﻿* {
     font-family: 'Raleway', sans-serif !important;
 }
-
+.navbar .container {
+    /*width: 1220px;*/
+    width:calc(100vw - 30px);
+}
+@media (max-width: 1235px) {
+    .navbar-brand {
+        display:none;
+    }
+}
+@media (max-width: 760px) {
+    .navbar-brand {
+        display: block;
+    }
+}
 body {
     padding-top: 50px;
     padding-bottom: 20px;
