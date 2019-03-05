@@ -79,9 +79,40 @@
                             'title': getAllBranches[i]["brnachName"]
                         });
 
+
+                        var str = 'https://www.hebcal.com/shabbat/?cfg=json&geo=pos&latitude=' +
+                            getAllBranches[i]["latitude"] +
+                            '&longitude=' + getAllBranches[i]["longitude"] +
+                            '&tzid=Asia/Jerusalem&m=50&a=off';
+
+         
+                        var shabostime;
+                        $.getJSON(str, function (data) {
+
+                            //parsedData = JSON.parse(data);
+                            //shabostime = new String(data.items[2].date).substring(12, 17);
+                          shabostime = data.items[2].date;
+                        });
+
                         var content = "<div><h2>" + getAllBranches[i]["brnachName"] +
-                            "</h2>" + "<div><h4>Opening hours: " + getAllBranches[i]["openingHours"] + "</h4></div></div>";
+                            "</h2>" + "<div><h4>Opening hours: " + getAllBranches[i]["openingHours"] + "</h4></div></div>" +
+                            "Friday 4 hours before liting:" + shabostime;
+
                         bindInfoWindow(marker, map, new google.maps.InfoWindow(), content);
+
+
+
+                        //using(WebClient wc = new WebClient())
+                        //{
+                        //    var json = wc.DownloadString(str);
+                        //}
+
+
+                        //var json = new WebClient().DownloadString("https://www.hebcal.com/shabbat/?cfg=json&geo=pos&latitude=" +
+                        //    getAllBranches[i]["latitude"] +
+                        //    "&longitude=" + getAllBranches[i]["longitude"] +
+                        //    "&tzid=Asia/Jerusalem&m=50&a=off");
+
                     }
                 });
 
