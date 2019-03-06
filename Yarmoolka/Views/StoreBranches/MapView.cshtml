@@ -47,19 +47,10 @@
 
 
     <div id="map_canvas" style="height: 600px;    border-radius: 40px;"></div>
-
-
-
-
-
     <br /><br /><br />
-
-
-
     <p>
         <a href="javascript:void(0);" onclick="history.go(-1);">Go Back</a>
     </p>
-
 
     @section scripts {
         <script type="text/javascript">
@@ -74,56 +65,87 @@
                 $.getJSON("../StoreBranches/GetAllBranches", function (getAllBranches) {
                     for (var i = 0; i < getAllBranches.length; i++) {
                         var marker = new google.maps.Marker({
-                            'position': new google.maps.LatLng(getAllBranches[i]["latitude"], getAllBranches[i]["longitude"]),
+                            'position': new google.maps.LatLng(getAllBranches[i].latitude, getAllBranches[i]["longitude"]),
                             'map': map,
                             'title': getAllBranches[i]["brnachName"]
                         });
 
 
+                        window.AllBranches = getAllBranches;
                         var str = 'https://www.hebcal.com/shabbat/?cfg=json&geo=pos&latitude=' +
                             getAllBranches[i]["latitude"] +
-                            '&longitude=' + getAllBranches[i]["longitude"] +
+                            '&longitude=' + getAllBranches[i].longitude +
                             '&tzid=Asia/Jerusalem&m=50&a=off';
 
-         
-                        var shabostime;
-                        $.getJSON(str, function (data) {
-
-                            //parsedData = JSON.parse(data);
-                            //shabostime = new String(data.items[2].date).substring(12, 17);
-                          shabostime = data.items[2].date;
+                        $.ajax({
+                            dataType: "json",
+                            async: false,
+                            url: str,
+                            method: "GET",
+                            success: function (data) {
+                                window.top.name = data.items[2].date;
+                            }
                         });
 
+
+                        createPopUpContent(i, window.top.name, marker,map);
+                        
+                        //$.getJSON(str, function (data) {
+                            
+                        //    //window.top.name = data.items[2].date;
+                        //    //console.log(String(window.top.name).substring(11, 16));
+                        //    createPopUpContent(i, data.items[2].date);
+                           
+                        //});
+                        
+                        //console.log(String(window.top.name).substring(11, 16));
+  
+                        $.ajax({
+                            dataType: "json",
+                            async: false,
+                            url: str,
+                            method: "GET",
+                            success: function (data)
+                            {
+                                window.top.name = data.items[2].date;
+                            }
+                        });
+        
                         var content = "<div><h2>" + getAllBranches[i]["brnachName"] +
                             "</h2>" + "<div><h4>Opening hours: " + getAllBranches[i]["openingHours"] + "</h4></div></div>" +
-                            "Friday 4 hours before liting:" + shabostime;
+                            "Friday 4 hours before shabbat ( lighting time is: " + String(window.top.name).substring(11, 16) + " israel time zone )";
 
                         bindInfoWindow(marker, map, new google.maps.InfoWindow(), content);
-
-
-
-                        //using(WebClient wc = new WebClient())
-                        //{
-                        //    var json = wc.DownloadString(str);
-                        //}
-
-
-                        //var json = new WebClient().DownloadString("https://www.hebcal.com/shabbat/?cfg=json&geo=pos&latitude=" +
-                        //    getAllBranches[i]["latitude"] +
-                        //    "&longitude=" + getAllBranches[i]["longitude"] +
-                        //    "&tzid=Asia/Jerusalem&m=50&a=off");
-
+    
                     }
                 });
 
                 $('.loading').hide();
             });
 
+            function getHoursData(str) {
+                $.getJSON(str, function (data) {
+
+                    //window.top.name = data.items[2].date;
+                    //console.log(String(window.top.name).substring(11, 16));
+                    return data;
+
+                });
+            }
+
             function bindInfoWindow(marker, map, infowindow, html) {
                 google.maps.event.addListener(marker, 'click', function () {
                     infowindow.setContent(html);
                     infowindow.open(map, marker);
                 });
+            }
+
+            function createPopUpContent(i, hour, marker, map) {
+                var content = "<div><h2>" + window.AllBranches[i]["brnachName"] +
+                    "</h2>" + "<div><h4>Opening hours: " + window.AllBranches[i]["openingHours"] + "</h4></div></div>" +
+                    "Friday 4 hours before liting:" + String(hour).substring(11, 16);
+
+                bindInfoWindow(marker, map, new google.maps.InfoWindow(), content);
             }
         </script>
     }
